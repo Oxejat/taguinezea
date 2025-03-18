@@ -14,6 +14,8 @@
 <link rel="alternate" href="/galerie/" hreflang="fr">
 <link rel="dns-prefetch" href="">
 <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+<link rel="dns-prefetch" href="https://res.cloudinary.com">
+<link rel="preconnect" href="https://res.cloudinary.com">
 <link rel="alternate" type="application/rss+xml" title="Zmalet El Emir Abdelkader &raquo; Feed" href="/en/feed/">
 <link rel="alternate" type="application/rss+xml" title="Zmalet El Emir Abdelkader &raquo; Comments Feed" href="/en/comments/feed/">
 <script type="text/javascript">
@@ -48,11 +50,17 @@ window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/15
 :where(.wp-block-columns.is-layout-flex){gap: 2em;}:where(.wp-block-columns.is-layout-grid){gap: 2em;}
 :root :where(.wp-block-pullquote){font-size: 1.5em;line-height: 1.6;}
 </style>
+<link rel="stylesheet" id="ssb-front-css-css" href="/wp-content/plugins/simple-social-buttons/assets/css/front.css?ver=6.0.0" type="text/css" media="all">
 <link rel="stylesheet" id="parent-style-css" href="/wp-content/themes/minimalistblogger/style.css?ver=6.7.2" type="text/css" media="all">
 <link rel="stylesheet" id="dark-minimalistblogger-google-fonts-css" href="https://fonts.googleapis.com/css?family=Roboto%3A400%2C700%2C900%7CZen+Antique&amp;ver=6.7.2" type="text/css" media="all">
 <link rel="stylesheet" id="font-awesome-css" href="/wp-content/themes/minimalistblogger/css/font-awesome.min.css?ver=6.7.2" type="text/css" media="all">
 <link rel="stylesheet" id="minimalistblogger-style-css" href="/wp-content/themes/dark-minimalistblogger/style.css?ver=6.7.2" type="text/css" media="all">
 <link rel="stylesheet" id="minimalistblogger-google-fonts-css" href="https://fonts.googleapis.com/css?family=Lato%3A300%2C400%2C700%2C900%7CMerriweather%3A400%2C700&amp;ver=6.7.2" type="text/css" media="all">
+<script type="text/javascript">
+/* <![CDATA[ */
+var CLDLB = {"image_delivery":"on","image_optimization":"on","image_format":"auto","image_quality":"auto","image_freeform":"","svg_support":"off","crop_sizes":"","image_preview":"https:\/\/res.cloudinary.com\/demo\/image\/upload\/w_600\/sample.jpg","video_delivery":"on","video_player":"wp","adaptive_streaming":"off","adaptive_streaming_mode":"mpd","video_controls":"on","video_loop":"off","video_autoplay_mode":"off","video_optimization":"on","video_format":"auto","video_quality":"auto","video_freeform":"","video_preview":"","use_lazy_load":"on","lazy_threshold":"100px","lazy_custom_color":"rgba(153,153,153,0.5)","lazy_animate":"on","lazy_placeholder":"blur","dpr":"2X","lazyload_preview":"https:\/\/res.cloudinary.com\/demo\/image\/upload\/w_600\/sample.jpg","enable_breakpoints":"on","pixel_step":200,"breakpoints":"","max_width":2048,"min_width":200,"breakpoints_preview":"https:\/\/res.cloudinary.com\/demo\/image\/upload\/w_600\/sample.jpg","overlay":"off","placeholder":"e_blur:2000,q_1,f_auto","base_url":"https:\/\/res.cloudinary.com\/dgjtact77"};!function(){const e={deviceDensity:window.devicePixelRatio?window.devicePixelRatio:"auto",density:null,config:CLDLB||{},lazyThreshold:0,enabled:!1,sizeBands:[],iObserver:null,pObserver:null,rObserver:null,aboveFold:!0,minPlaceholderThreshold:500,bind(e){e.CLDbound=!0,this.enabled||this._init();const t=e.dataset.size.split(" ");e.originalWidth=t[0],e.originalHeight=t[1],this.pObserver?(this.aboveFold&&this.inInitialView(e)?this.buildImage(e):(this.pObserver.observe(e),this.iObserver.observe(e)),e.addEventListener("error",(t=>{e.srcset="",e.src='data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg"><rect width="100%" height="100%" fill="rgba(0,0,0,0.1)"/><text x="50%" y="50%" fill="red" text-anchor="middle" dominant-baseline="middle">%26%23x26A0%3B&#65038;',this.rObserver.unobserve(e)}))):this.setupFallback(e)},buildImage(e){e.dataset.srcset?(e.cld_loaded=!0,e.srcset=e.dataset.srcset):(e.src=this.getSizeURL(e),e.dataset.responsive&&this.rObserver.observe(e))},inInitialView(e){const t=e.getBoundingClientRect();return this.aboveFold=t.top<window.innerHeight+this.lazyThreshold,this.aboveFold},setupFallback(e){const t=[];this.sizeBands.forEach((i=>{if(i<=e.originalWidth){let s=this.getSizeURL(e,i,!0)+` ${i}w`;-1===t.indexOf(s)&&t.push(s)}})),e.srcset=t.join(","),e.sizes=`(max-width: ${e.originalWidth}px) 100vw, ${e.originalWidth}px`},_init(){this.enabled=!0,this._calcThreshold(),this._getDensity();let e=parseInt(this.config.max_width);const t=parseInt(this.config.min_width),i=parseInt(this.config.pixel_step);for(;e-i>=t;)e-=i,this.sizeBands.push(e);"undefined"!=typeof IntersectionObserver&&this._setupObservers(),this.enabled=!0},_setupObservers(){const e={rootMargin:this.lazyThreshold+"px 0px "+this.lazyThreshold+"px 0px"},t=this.minPlaceholderThreshold<2*this.lazyThreshold?2*this.lazyThreshold:this.minPlaceholderThreshold,i={rootMargin:t+"px 0px "+t+"px 0px"};this.rObserver=new ResizeObserver(((e,t)=>{e.forEach((e=>{e.target.cld_loaded&&e.contentRect.width>=e.target.cld_loaded&&(e.target.src=this.getSizeURL(e.target))}))})),this.iObserver=new IntersectionObserver(((e,t)=>{e.forEach((e=>{e.isIntersecting&&(this.buildImage(e.target),t.unobserve(e.target),this.pObserver.unobserve(e.target))}))}),e),this.pObserver=new IntersectionObserver(((e,t)=>{e.forEach((e=>{e.isIntersecting&&(e.target.src=this.getPlaceholderURL(e.target),t.unobserve(e.target))}))}),i)},_calcThreshold(){const e=this.config.lazy_threshold.replace(/[^0-9]/g,"");let t=0;switch(this.config.lazy_threshold.replace(/[0-9]/g,"").toLowerCase()){case"em":t=parseFloat(getComputedStyle(document.body).fontSize)*e;break;case"rem":t=parseFloat(getComputedStyle(document.documentElement).fontSize)*e;break;case"vh":t=window.innerHeight/e*100;break;default:t=e}this.lazyThreshold=parseInt(t,10)},_getDensity(){let e=this.config.dpr?this.config.dpr.replace("X",""):"off";if("off"===e)return this.density=1,1;let t=this.deviceDensity;"max"!==e&&"auto"!==t&&(e=parseFloat(e),t=t>Math.ceil(e)?e:t),this.density=t},scaleWidth(e,t,i){const s=parseInt(this.config.max_width),r=Math.round(s/i);if(!t){t=e.width;let a=Math.round(t/i);for(;-1===this.sizeBands.indexOf(t)&&a<r&&t<s;)t++,a=Math.round(t/i)}return t>s&&(t=s),e.originalWidth<t&&(t=e.originalWidth),t},scaleSize(e,t,i){const s=e.dataset.crop?parseFloat(e.dataset.crop):(e.originalWidth/e.originalHeight).toFixed(2),r=this.scaleWidth(e,t,s),a=Math.round(r/s),o=[];return e.dataset.transformationCrop?o.push(e.dataset.transformationCrop):e.dataset.crop||(o.push(e.dataset.crop?"c_fill":"c_scale"),e.dataset.crop&&o.push("g_auto")),o.push("w_"+r),o.push("h_"+a),i&&1!==this.density&&o.push("dpr_"+this.density),e.cld_loaded=r,{transformation:o.join(","),nameExtension:r+"x"+a}},getDeliveryMethod:e=>e.dataset.seo&&"upload"===e.dataset.delivery?"images":"image/"+e.dataset.delivery,getSizeURL(e,t){const i=this.scaleSize(e,t,!0);return[this.config.base_url,this.getDeliveryMethod(e),"upload"===e.dataset.delivery?i.transformation:"",e.dataset.transformations,"v"+e.dataset.version,e.dataset.publicId+"?_i=AA"].filter(this.empty).join("/")},getPlaceholderURL(e){e.cld_placehold=!0;const t=this.scaleSize(e,null,!1);return[this.config.base_url,this.getDeliveryMethod(e),t.transformation,this.config.placeholder,e.dataset.publicId].filter(this.empty).join("/")},empty:e=>void 0!==e&&0!==e.length};window.CLDBind=t=>{t.CLDbound||e.bind(t)},window.initFallback=()=>{[...document.querySelectorAll('img[data-cloudinary="lazy"]')].forEach((e=>{CLDBind(e)}))},window.addEventListener("load",(()=>{initFallback()})),document.querySelector('script[src*="?cloudinary_lazy_load_loader"]')&&initFallback()}();
+/* ]]> */
+</script>
 <script type="text/javascript" src="/wp-includes/js/jquery/jquery.min.js?ver=3.7.1" id="jquery-core-js"></script>
 <script type="text/javascript" src="/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.4.1" id="jquery-migrate-js"></script>
 <link rel="https://api.w.org/" href="/wp-json/"><link rel="alternate" title="JSON" type="application/json" href="/wp-json/wp/v2/posts/114"><link rel="EditURI" type="application/rsd+xml" title="RSD" href="/xmlrpc.php?rsd">
@@ -66,6 +74,52 @@ window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/15
 }
 </style> 
 <!--/Customizer CSS-->
+ <style media="screen">
+
+		.simplesocialbuttons.simplesocialbuttons_inline .ssb-fb-like, .simplesocialbuttons.simplesocialbuttons_inline amp-facebook-like {
+	  margin: ;
+	}
+		 /*inline margin*/
+	
+		.simplesocialbuttons.simplesocialbuttons_inline.simplesocial-simple-round button{
+	  margin: ;
+	}
+	
+	
+	
+	
+	
+			 /*margin-digbar*/
+
+	
+	
+	
+	
+	
+	
+	
+</style>
+
+<!-- Open Graph Meta Tags generated by Simple Social Buttons 6.0.0 -->
+<meta property="og:title" content="Gallery - Zmalet El Emir Abdelkader">
+<meta property="og:description" content="Some period paintings Portrait of Emir Abdelkader - Stanislas Chlebowski Emir Abdelkader in Damascus - Jean-Baptiste Huysman At the Well - Adolf Schreyer The Three Friends - Rachid Talbi The Scouts - Henri F&eacute;lix Emmanuel Philippoteaux The Lion Hunt - Horace Vernet">
+<meta property="og:url" content="/en/gallery/">
+<meta property="og:site_name" content="Zmalet El Emir Abdelkader">
+<meta property="og:image" content="https://taguine14.netlify.app/_next/image?url=%2Fimages%2FPortrait%2520de%2520L%27Emir%2520Abdelkader.jpg&amp;w=3840&amp;q=75">
+<meta property="og:image" content="https://taguine14.netlify.app/_next/image?url=%2Fimages%2FEmir%2520Abdelkader%2520%25C3%25A0%2520Damas%2520-%2520Jean-Baptiste%2520Huysman%2520.jpg&amp;w=3840&amp;q=75">
+<meta property="og:image" content="https://taguine14.netlify.app/_next/image?url=%2Fimages%2FAu%2520puits%2520-%2520Adolf%2520Schreyer.jpeg&amp;w=3840&amp;q=75">
+<meta property="og:image" content="https://taguine14.netlify.app/_next/image?url=%2Fimages%2FLes%2520trois%2520amis%2520-%2520Rachid%2520Talbi.jpeg&amp;w=3840&amp;q=75">
+<meta property="og:image" content="https://taguine14.netlify.app/_next/image?url=%2Fimages%2FLes%2520%25C3%25A9claireurs%2520-%2520Henri%2520F%25C3%25A9lix%2520Emmanuel%2520Philippoteaux.jpg&amp;w=3840&amp;q=75">
+<meta property="og:image" content="https://taguine14.netlify.app/_next/image?url=%2Fimages%2FLa%2520Chasse%2520au%2520Lions%2520-%2520Horace%2520Vernet.jpeg&amp;w=3840&amp;q=75">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:description" content="Some period paintings Portrait of Emir Abdelkader - Stanislas Chlebowski Emir Abdelkader in Damascus - Jean-Baptiste Huysman At the Well - Adolf Schreyer The Three Friends - Rachid Talbi The Scouts - Henri F&eacute;lix Emmanuel Philippoteaux The Lion Hunt - Horace Vernet">
+<meta name="twitter:title" content="Gallery - Zmalet El Emir Abdelkader">
+<meta property="twitter:image" content="https://taguine14.netlify.app/_next/image?url=%2Fimages%2FPortrait%2520de%2520L%27Emir%2520Abdelkader.jpg&amp;w=3840&amp;q=75">
+<meta property="twitter:image" content="https://taguine14.netlify.app/_next/image?url=%2Fimages%2FEmir%2520Abdelkader%2520%25C3%25A0%2520Damas%2520-%2520Jean-Baptiste%2520Huysman%2520.jpg&amp;w=3840&amp;q=75">
+<meta property="twitter:image" content="https://taguine14.netlify.app/_next/image?url=%2Fimages%2FAu%2520puits%2520-%2520Adolf%2520Schreyer.jpeg&amp;w=3840&amp;q=75">
+<meta property="twitter:image" content="https://taguine14.netlify.app/_next/image?url=%2Fimages%2FLes%2520trois%2520amis%2520-%2520Rachid%2520Talbi.jpeg&amp;w=3840&amp;q=75">
+<meta property="twitter:image" content="https://taguine14.netlify.app/_next/image?url=%2Fimages%2FLes%2520%25C3%25A9claireurs%2520-%2520Henri%2520F%25C3%25A9lix%2520Emmanuel%2520Philippoteaux.jpg&amp;w=3840&amp;q=75">
+<meta property="twitter:image" content="https://taguine14.netlify.app/_next/image?url=%2Fimages%2FLa%2520Chasse%2520au%2520Lions%2520-%2520Horace%2520Vernet.jpeg&amp;w=3840&amp;q=75">
 
 		<style type="text/css">
 		.blogpost-button, .wp-block-search .wp-block-search__button, .comments-area p.form-submit input, .post-data-divider { background: #d3a655; }
@@ -100,14 +154,14 @@ window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/15
 		}
 
 	
-		/wp-content/uploads/2025/03/cropped-me.jpg"
+		https://res.cloudinary.com/dgjtact77/images/f_auto,q_auto/v1742213653/cropped-me/cropped-me.jpg?_i=AA"
 		
 		
 		</style>
-		<link rel="icon" href="/wp-content/uploads/2025/03/cropped-cropped-me-32x32.jpg" sizes="32x32">
-<link rel="icon" href="/wp-content/uploads/2025/03/cropped-cropped-me-192x192.jpg" sizes="192x192">
-<link rel="apple-touch-icon" href="/wp-content/uploads/2025/03/cropped-cropped-me-180x180.jpg">
-<meta name="msapplication-TileImage" content="/wp-content/uploads/2025/03/cropped-cropped-me-270x270.jpg">
+		<link rel="icon" href="https://res.cloudinary.com/dgjtact77/images/w_32,h_32,c_fill,g_auto/f_auto,q_auto/v1742213557/cropped-cropped-me/cropped-cropped-me.jpg?_i=AA" sizes="32x32">
+<link rel="icon" href="https://res.cloudinary.com/dgjtact77/images/w_192,h_192,c_fill,g_auto/f_auto,q_auto/v1742213557/cropped-cropped-me/cropped-cropped-me.jpg?_i=AA" sizes="192x192">
+<link rel="apple-touch-icon" href="https://res.cloudinary.com/dgjtact77/images/w_180,h_180,c_fill,g_auto/f_auto,q_auto/v1742213557/cropped-cropped-me/cropped-cropped-me.jpg?_i=AA">
+<meta name="msapplication-TileImage" content="https://res.cloudinary.com/dgjtact77/images/w_270,h_270,c_fill,g_auto/f_auto,q_auto/v1742213557/cropped-cropped-me/cropped-cropped-me.jpg?_i=AA">
 		<style type="text/css" id="wp-custom-css">
 			.entry-meta {
 	display: none;
@@ -160,7 +214,7 @@ window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/15
 
 		<div class="content-wrap">
 		<div class="bottom-header-wrapper">
-			<img src="/wp-content/uploads/2025/03/cropped-me.jpg" alt="Zmalet El Emir Abdelkader">
+			<img width="640" height="266" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI2NDAiIGhlaWdodD0iMjY2Ij48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIj48YW5pbWF0ZSBhdHRyaWJ1dGVOYW1lPSJmaWxsIiB2YWx1ZXM9InJnYmEoMTUzLDE1MywxNTMsMC41KTtyZ2JhKDE1MywxNTMsMTUzLDAuMSk7cmdiYSgxNTMsMTUzLDE1MywwLjUpIiBkdXI9IjJzIiByZXBlYXRDb3VudD0iaW5kZWZpbml0ZSIgLz48L3JlY3Q+PC9zdmc+" alt="Zmalet El Emir Abdelkader" data-public-id="cropped-me/cropped-me.jpg" class="wp-post-0 wp-image-248" data-format="jpg" data-transformations="f_auto,q_auto" data-version="1742213653" data-seo="1" data-responsive="1" data-size="640 266" data-delivery="upload" onload=";window.CLDBind?CLDBind(this):null;" data-cloudinary="lazy">
 		</div>
 	</div>
 
@@ -237,6 +291,13 @@ window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/15
 
 
 <p class="has-text-align-center"><em>The Lion Hunt &ndash; Horace Vernet</em></p>
+<div class="simplesocialbuttons simplesocial-simple-round simplesocialbuttons_inline simplesocialbuttons-align-left post-114 post  simplesocialbuttons-inline-right-in">
+<button class="simplesocial-fb-share" rel="nofollow" target="_blank" aria-label="Facebook Share" data-href="https://www.facebook.com/sharer/sharer.php?u=/en/gallery/" onclick="javascript:window.open(this.dataset.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;"><span class="simplesocialtxt">Facebook </span> </button>
+<button onclick="javascript:window.location.href = this.dataset.href;return false;" class="simplesocial-email-share" aria-label="Share through Email" rel="nofollow" target="_blank" data-href="mailto:?subject=Gallery&amp;body=/en/gallery/"><span class="simplesocialtxt">Email</span></button>
+<button onclick="javascript:window.open(this.dataset.href, '_blank' );return false;" class="simplesocial-whatsapp-share" rel="nofollow" target="_blank" aria-label="WhatsApp Share" data-href="https://api.whatsapp.com/send?text=/en/gallery/"><span class="simplesocialtxt">WhatsApp</span></button>
+<button class="simplesocial-copy-link copy-share" rel="nofollow" target="_blank" aria-label="Copy Link" data-href=" /en/gallery/" onclick="ssb_copy_share_link(this); return false;"><span class="simplesocialtxt">Copy</span><span class="ssb_tooltip">Copied</span> </button>
+<button onclick="javascript:window.print();return false;" rel="nofollow" target="_blank" aria-label="Print Share" class="simplesocial-print-share"><span class="simplesocialtxt">Print</span></button>
+</div>
 
 			</div><!-- .entry-content -->
 </article><!-- #post-114 -->
@@ -292,11 +353,53 @@ window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/15
 <div id="smobile-menu" class="mobile-only"></div>
 <div id="mobile-menu-overlay"></div>
 
+<script type="text/javascript" src="/wp-content/plugins/simple-social-buttons/assets/js/frontend-blocks.js?ver=6.0.0" id="ssb-blocks-front-js-js"></script>
+<script type="text/javascript" id="ssb-front-js-js-extra">
+/* <![CDATA[ */
+var SSB = {"ajax_url":"\/wp-admin\/admin-ajax.php","fb_share_nonce":"10c9966c8a"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="/wp-content/plugins/simple-social-buttons/assets/js/front.js?ver=6.0.0" id="ssb-front-js-js"></script>
 <script type="text/javascript" src="/wp-content/themes/minimalistblogger/js/navigation.js?ver=20170823" id="minimalistblogger-navigation-js"></script>
 <script type="text/javascript" src="/wp-content/themes/minimalistblogger/js/skip-link-focus-fix.js?ver=20170823" id="minimalistblogger-skip-link-focus-fix-js"></script>
 <script type="text/javascript" src="/wp-content/themes/minimalistblogger/js/script.js?ver=20160720" id="minimalistblogger-script-js"></script>
 <script type="text/javascript" src="/wp-content/themes/minimalistblogger/js/jquery.flexslider.js?ver=20150423" id="flexslider-js"></script>
 <script type="text/javascript" src="/wp-content/themes/minimalistblogger/js/accessibility.js?ver=20160720" id="minimalistblogger-accessibility-js"></script>
-</body>
+<script type="text/javascript">
+		document.addEventListener("DOMContentLoaded", function() {
+			var if_ssb_exist = document.getElementsByClassName( "simplesocialbuttons" ).length > 0;
+			if (if_ssb_exist) {
+				var ssb_admin_ajax = '/wp-admin/admin-ajax.php';
+				var ssb_post_id = 114 ;
+				var ssb_post_url = '/en/gallery/';
+				var ssb_alternate_post_url = '/en/gallery/';
+				jQuery( document ).ready(function(){
+				var is_ssb_used = jQuery('.simplesocialbuttons');
+				if( is_ssb_used ) {
+
+					var data = {
+					'action': 'ssb_fetch_data',
+					'postID': ssb_post_id
+				};
+					jQuery.post(ssb_admin_ajax, data, function(data, textStatus, xhr) {
+						var array = JSON.parse(data);
+						jQuery.each( array, function( index, value ){
+
+							if( index == 'total' ){
+								jQuery('.ssb_'+ index +'_counter').html(value + '<span>Shares');
+							}else{
+								jQuery('.ssb_'+ index +'_counter').html(value);
+							}
+						});
+
+					});
+				}
+				})
+
+			//ssbPlugin.fetchFacebookShares();
+			}
+		});
+
+		</script></body>
 </html>
 <!-- Powered by Staatic (https://staatic.com/) -->

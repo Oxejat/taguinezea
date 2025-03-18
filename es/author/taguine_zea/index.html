@@ -15,6 +15,8 @@
 <link rel="alternate" href="/author/taguine_zea/" hreflang="fr">
 <link rel="dns-prefetch" href="">
 <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+<link rel="dns-prefetch" href="https://res.cloudinary.com">
+<link rel="preconnect" href="https://res.cloudinary.com">
 <link rel="alternate" type="application/rss+xml" title="Zmalet El Emir Abdelkader &raquo; Feed" href="/es/feed/">
 <link rel="alternate" type="application/rss+xml" title="Zmalet El Emir Abdelkader &raquo; Feed de los comentarios" href="/es/comments/feed/">
 <link rel="alternate" type="application/rss+xml" title="Zmalet El Emir Abdelkader &raquo; Feed de entradas de taguine_zea" href="/es/author/taguine_zea/feed/">
@@ -50,11 +52,17 @@ window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/15
 :where(.wp-block-columns.is-layout-flex){gap: 2em;}:where(.wp-block-columns.is-layout-grid){gap: 2em;}
 :root :where(.wp-block-pullquote){font-size: 1.5em;line-height: 1.6;}
 </style>
+<link rel="stylesheet" id="ssb-front-css-css" href="/wp-content/plugins/simple-social-buttons/assets/css/front.css?ver=6.0.0" type="text/css" media="all">
 <link rel="stylesheet" id="parent-style-css" href="/wp-content/themes/minimalistblogger/style.css?ver=6.7.2" type="text/css" media="all">
 <link rel="stylesheet" id="dark-minimalistblogger-google-fonts-css" href="https://fonts.googleapis.com/css?family=Roboto%3A400%2C700%2C900%7CZen+Antique&amp;ver=6.7.2" type="text/css" media="all">
 <link rel="stylesheet" id="font-awesome-css" href="/wp-content/themes/minimalistblogger/css/font-awesome.min.css?ver=6.7.2" type="text/css" media="all">
 <link rel="stylesheet" id="minimalistblogger-style-css" href="/wp-content/themes/dark-minimalistblogger/style.css?ver=6.7.2" type="text/css" media="all">
 <link rel="stylesheet" id="minimalistblogger-google-fonts-css" href="https://fonts.googleapis.com/css?family=Lato%3A300%2C400%2C700%2C900%7CMerriweather%3A400%2C700&amp;ver=6.7.2" type="text/css" media="all">
+<script type="text/javascript">
+/* <![CDATA[ */
+var CLDLB = {"image_delivery":"on","image_optimization":"on","image_format":"auto","image_quality":"auto","image_freeform":"","svg_support":"off","crop_sizes":"","image_preview":"https:\/\/res.cloudinary.com\/demo\/image\/upload\/w_600\/sample.jpg","video_delivery":"on","video_player":"wp","adaptive_streaming":"off","adaptive_streaming_mode":"mpd","video_controls":"on","video_loop":"off","video_autoplay_mode":"off","video_optimization":"on","video_format":"auto","video_quality":"auto","video_freeform":"","video_preview":"","use_lazy_load":"on","lazy_threshold":"100px","lazy_custom_color":"rgba(153,153,153,0.5)","lazy_animate":"on","lazy_placeholder":"blur","dpr":"2X","lazyload_preview":"https:\/\/res.cloudinary.com\/demo\/image\/upload\/w_600\/sample.jpg","enable_breakpoints":"on","pixel_step":200,"breakpoints":"","max_width":2048,"min_width":200,"breakpoints_preview":"https:\/\/res.cloudinary.com\/demo\/image\/upload\/w_600\/sample.jpg","overlay":"off","placeholder":"e_blur:2000,q_1,f_auto","base_url":"https:\/\/res.cloudinary.com\/dgjtact77"};!function(){const e={deviceDensity:window.devicePixelRatio?window.devicePixelRatio:"auto",density:null,config:CLDLB||{},lazyThreshold:0,enabled:!1,sizeBands:[],iObserver:null,pObserver:null,rObserver:null,aboveFold:!0,minPlaceholderThreshold:500,bind(e){e.CLDbound=!0,this.enabled||this._init();const t=e.dataset.size.split(" ");e.originalWidth=t[0],e.originalHeight=t[1],this.pObserver?(this.aboveFold&&this.inInitialView(e)?this.buildImage(e):(this.pObserver.observe(e),this.iObserver.observe(e)),e.addEventListener("error",(t=>{e.srcset="",e.src='data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg"><rect width="100%" height="100%" fill="rgba(0,0,0,0.1)"/><text x="50%" y="50%" fill="red" text-anchor="middle" dominant-baseline="middle">%26%23x26A0%3B&#65038;',this.rObserver.unobserve(e)}))):this.setupFallback(e)},buildImage(e){e.dataset.srcset?(e.cld_loaded=!0,e.srcset=e.dataset.srcset):(e.src=this.getSizeURL(e),e.dataset.responsive&&this.rObserver.observe(e))},inInitialView(e){const t=e.getBoundingClientRect();return this.aboveFold=t.top<window.innerHeight+this.lazyThreshold,this.aboveFold},setupFallback(e){const t=[];this.sizeBands.forEach((i=>{if(i<=e.originalWidth){let s=this.getSizeURL(e,i,!0)+` ${i}w`;-1===t.indexOf(s)&&t.push(s)}})),e.srcset=t.join(","),e.sizes=`(max-width: ${e.originalWidth}px) 100vw, ${e.originalWidth}px`},_init(){this.enabled=!0,this._calcThreshold(),this._getDensity();let e=parseInt(this.config.max_width);const t=parseInt(this.config.min_width),i=parseInt(this.config.pixel_step);for(;e-i>=t;)e-=i,this.sizeBands.push(e);"undefined"!=typeof IntersectionObserver&&this._setupObservers(),this.enabled=!0},_setupObservers(){const e={rootMargin:this.lazyThreshold+"px 0px "+this.lazyThreshold+"px 0px"},t=this.minPlaceholderThreshold<2*this.lazyThreshold?2*this.lazyThreshold:this.minPlaceholderThreshold,i={rootMargin:t+"px 0px "+t+"px 0px"};this.rObserver=new ResizeObserver(((e,t)=>{e.forEach((e=>{e.target.cld_loaded&&e.contentRect.width>=e.target.cld_loaded&&(e.target.src=this.getSizeURL(e.target))}))})),this.iObserver=new IntersectionObserver(((e,t)=>{e.forEach((e=>{e.isIntersecting&&(this.buildImage(e.target),t.unobserve(e.target),this.pObserver.unobserve(e.target))}))}),e),this.pObserver=new IntersectionObserver(((e,t)=>{e.forEach((e=>{e.isIntersecting&&(e.target.src=this.getPlaceholderURL(e.target),t.unobserve(e.target))}))}),i)},_calcThreshold(){const e=this.config.lazy_threshold.replace(/[^0-9]/g,"");let t=0;switch(this.config.lazy_threshold.replace(/[0-9]/g,"").toLowerCase()){case"em":t=parseFloat(getComputedStyle(document.body).fontSize)*e;break;case"rem":t=parseFloat(getComputedStyle(document.documentElement).fontSize)*e;break;case"vh":t=window.innerHeight/e*100;break;default:t=e}this.lazyThreshold=parseInt(t,10)},_getDensity(){let e=this.config.dpr?this.config.dpr.replace("X",""):"off";if("off"===e)return this.density=1,1;let t=this.deviceDensity;"max"!==e&&"auto"!==t&&(e=parseFloat(e),t=t>Math.ceil(e)?e:t),this.density=t},scaleWidth(e,t,i){const s=parseInt(this.config.max_width),r=Math.round(s/i);if(!t){t=e.width;let a=Math.round(t/i);for(;-1===this.sizeBands.indexOf(t)&&a<r&&t<s;)t++,a=Math.round(t/i)}return t>s&&(t=s),e.originalWidth<t&&(t=e.originalWidth),t},scaleSize(e,t,i){const s=e.dataset.crop?parseFloat(e.dataset.crop):(e.originalWidth/e.originalHeight).toFixed(2),r=this.scaleWidth(e,t,s),a=Math.round(r/s),o=[];return e.dataset.transformationCrop?o.push(e.dataset.transformationCrop):e.dataset.crop||(o.push(e.dataset.crop?"c_fill":"c_scale"),e.dataset.crop&&o.push("g_auto")),o.push("w_"+r),o.push("h_"+a),i&&1!==this.density&&o.push("dpr_"+this.density),e.cld_loaded=r,{transformation:o.join(","),nameExtension:r+"x"+a}},getDeliveryMethod:e=>e.dataset.seo&&"upload"===e.dataset.delivery?"images":"image/"+e.dataset.delivery,getSizeURL(e,t){const i=this.scaleSize(e,t,!0);return[this.config.base_url,this.getDeliveryMethod(e),"upload"===e.dataset.delivery?i.transformation:"",e.dataset.transformations,"v"+e.dataset.version,e.dataset.publicId+"?_i=AA"].filter(this.empty).join("/")},getPlaceholderURL(e){e.cld_placehold=!0;const t=this.scaleSize(e,null,!1);return[this.config.base_url,this.getDeliveryMethod(e),t.transformation,this.config.placeholder,e.dataset.publicId].filter(this.empty).join("/")},empty:e=>void 0!==e&&0!==e.length};window.CLDBind=t=>{t.CLDbound||e.bind(t)},window.initFallback=()=>{[...document.querySelectorAll('img[data-cloudinary="lazy"]')].forEach((e=>{CLDBind(e)}))},window.addEventListener("load",(()=>{initFallback()})),document.querySelector('script[src*="?cloudinary_lazy_load_loader"]')&&initFallback()}();
+/* ]]> */
+</script>
 <script type="text/javascript" src="/wp-includes/js/jquery/jquery.min.js?ver=3.7.1" id="jquery-core-js"></script>
 <script type="text/javascript" src="/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.4.1" id="jquery-migrate-js"></script>
 <link rel="https://api.w.org/" href="/wp-json/"><link rel="alternate" title="JSON" type="application/json" href="/wp-json/wp/v2/users/1"><link rel="EditURI" type="application/rsd+xml" title="RSD" href="/xmlrpc.php?rsd">
@@ -66,6 +74,52 @@ window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/15
 }
 </style> 
 <!--/Customizer CSS-->
+ <style media="screen">
+
+		.simplesocialbuttons.simplesocialbuttons_inline .ssb-fb-like, .simplesocialbuttons.simplesocialbuttons_inline amp-facebook-like {
+	  margin: ;
+	}
+		 /*inline margin*/
+	
+		.simplesocialbuttons.simplesocialbuttons_inline.simplesocial-simple-round button{
+	  margin: ;
+	}
+	
+	
+	
+	
+	
+			 /*margin-digbar*/
+
+	
+	
+	
+	
+	
+	
+	
+</style>
+
+<!-- Open Graph Meta Tags generated by Simple Social Buttons 6.0.0 -->
+<meta property="og:title" content="Historia - Zmalet El Emir Abdelkader">
+<meta property="og:description" content="Historia de Z&rsquo;malet El &Eacute;mir Abdelkader (antes Taguine) La regi&oacute;n ha sido frecuentada desde la Antig&uuml;edad por los g&eacute;tulos, quienes, lejos de la influencia romana y bizantina, ten&iacute;an un estilo de vida n&oacute;mada y viajaban a trav&eacute;s de un vasto territorio que se extend&iacute;a desde Mauritania hasta T&uacute;nez. Estos pueblos guerreros realizaban incursiones y frecuentemente entraban en conflicto con los&hellip;">
+<meta property="og:url" content="/es/historia/">
+<meta property="og:site_name" content="Zmalet El Emir Abdelkader">
+<meta property="og:image" content="https://taguine14.netlify.app/_next/image?url=%2Fimages%2FMausol%25C3%25A9e_des_Rois_numides_dit_le_Medracen.jpg&amp;w=3840&amp;q=75">
+<meta property="og:image" content="https://taguine14.netlify.app/_next/image?url=%2Fimages%2F1000007658.png&amp;w=3840&amp;q=75">
+<meta property="og:image" content="https://taguine14.netlify.app/_next/image?url=%2Fimages%2F1000007656.png&amp;w=3840&amp;q=75">
+<meta property="og:image" content="https://taguine14.netlify.app/_next/image?url=%2Fimages%2FSmala_of_Abd_El-Kader_16_May_1843.jpg&amp;w=3840&amp;q=75">
+<meta property="og:image" content="https://taguine14.netlify.app/_next/image?url=%2Fimages%2FSmala%2520Emir%2520Abdelkader%2520-%2520Horace%2520Vernet.jpg&amp;w=3840&amp;q=75">
+<meta property="og:image" content="https://taguine14.netlify.app/_next/image?url=%2Fimages%2Fpict0058.jpg&amp;w=3840&amp;q=75">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:description" content="Historia de Z&rsquo;malet El &Eacute;mir Abdelkader (antes Taguine) La regi&oacute;n ha sido frecuentada desde la Antig&uuml;edad por los g&eacute;tulos, quienes, lejos de la influencia romana y bizantina, ten&iacute;an un estilo de vida n&oacute;mada y viajaban a trav&eacute;s de un vasto territorio que se extend&iacute;a desde Mauritania hasta T&uacute;nez. Estos pueblos guerreros realizaban incursiones y frecuentemente entraban en conflicto con los&hellip;">
+<meta name="twitter:title" content="Historia - Zmalet El Emir Abdelkader">
+<meta property="twitter:image" content="https://taguine14.netlify.app/_next/image?url=%2Fimages%2FMausol%25C3%25A9e_des_Rois_numides_dit_le_Medracen.jpg&amp;w=3840&amp;q=75">
+<meta property="twitter:image" content="https://taguine14.netlify.app/_next/image?url=%2Fimages%2F1000007658.png&amp;w=3840&amp;q=75">
+<meta property="twitter:image" content="https://taguine14.netlify.app/_next/image?url=%2Fimages%2F1000007656.png&amp;w=3840&amp;q=75">
+<meta property="twitter:image" content="https://taguine14.netlify.app/_next/image?url=%2Fimages%2FSmala_of_Abd_El-Kader_16_May_1843.jpg&amp;w=3840&amp;q=75">
+<meta property="twitter:image" content="https://taguine14.netlify.app/_next/image?url=%2Fimages%2FSmala%2520Emir%2520Abdelkader%2520-%2520Horace%2520Vernet.jpg&amp;w=3840&amp;q=75">
+<meta property="twitter:image" content="https://taguine14.netlify.app/_next/image?url=%2Fimages%2Fpict0058.jpg&amp;w=3840&amp;q=75">
 
 		<style type="text/css">
 		.blogpost-button, .wp-block-search .wp-block-search__button, .comments-area p.form-submit input, .post-data-divider { background: #d3a655; }
@@ -100,14 +154,14 @@ window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/15
 		}
 
 	
-		/wp-content/uploads/2025/03/cropped-me.jpg"
+		https://res.cloudinary.com/dgjtact77/images/f_auto,q_auto/v1742213653/cropped-me/cropped-me.jpg?_i=AA"
 		
 		
 		</style>
-		<link rel="icon" href="/wp-content/uploads/2025/03/cropped-cropped-me-32x32.jpg" sizes="32x32">
-<link rel="icon" href="/wp-content/uploads/2025/03/cropped-cropped-me-192x192.jpg" sizes="192x192">
-<link rel="apple-touch-icon" href="/wp-content/uploads/2025/03/cropped-cropped-me-180x180.jpg">
-<meta name="msapplication-TileImage" content="/wp-content/uploads/2025/03/cropped-cropped-me-270x270.jpg">
+		<link rel="icon" href="https://res.cloudinary.com/dgjtact77/images/w_32,h_32,c_fill,g_auto/f_auto,q_auto/v1742213557/cropped-cropped-me/cropped-cropped-me.jpg?_i=AA" sizes="32x32">
+<link rel="icon" href="https://res.cloudinary.com/dgjtact77/images/w_192,h_192,c_fill,g_auto/f_auto,q_auto/v1742213557/cropped-cropped-me/cropped-cropped-me.jpg?_i=AA" sizes="192x192">
+<link rel="apple-touch-icon" href="https://res.cloudinary.com/dgjtact77/images/w_180,h_180,c_fill,g_auto/f_auto,q_auto/v1742213557/cropped-cropped-me/cropped-cropped-me.jpg?_i=AA">
+<meta name="msapplication-TileImage" content="https://res.cloudinary.com/dgjtact77/images/w_270,h_270,c_fill,g_auto/f_auto,q_auto/v1742213557/cropped-cropped-me/cropped-cropped-me.jpg?_i=AA">
 		<style type="text/css" id="wp-custom-css">
 			.entry-meta {
 	display: none;
@@ -126,7 +180,7 @@ window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/15
 		</head>
 
 <body class="archive author author-taguine_zea author-1 hfeed header-image">
-	 <a class="skip-link screen-reader-text" href="#content">Skip to content</a>
+	 <a class="skip-link screen-reader-text" href="#content">Saltar al contenido</a>
 	<div id="page" class="site">
 
 		<header id="masthead" class="sheader site-header clearfix">
@@ -137,7 +191,7 @@ window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/15
 					</div>
 			</div>
 	<nav id="primary-site-navigation" class="primary-menu main-navigation clearfix">
-		<a href="#" id="pull" class="smenu-hide toggle-mobile-menu menu-toggle" aria-controls="secondary-menu" aria-expanded="false">Menu</a>
+		<a href="#" id="pull" class="smenu-hide toggle-mobile-menu menu-toggle" aria-controls="secondary-menu" aria-expanded="false">Men&uacute;</a>
 		<div class="content-wrap text-center">
 			<div class="center-main-menu">
 				<div class="menu-a-proposito-container"><ul id="primary-menu" class="pmenu"><li id="menu-item-237-ar" class="lang-item lang-item-14 lang-item-ar lang-item-first menu-item menu-item-type-custom menu-item-object-custom menu-item-237-ar"><a href="/ar/author/taguine_zea/" hreflang="ar" lang="ar"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAALCAMAAABBPP0LAAAAilBMVEUPckAGaTUAYCjh4uHm5uba2tqSv6mIuKH6+/v39/d7sZZ0rJBuqYtnpYaNmYHw2Nfz7Ozy8fHu7u7ieXDmcWXnjofSe29hn4DR0dG6bF9PoH3gVUry9PNZnHvPbWBQlHLvzs0AURZ1hWjXWU7kdGvMzMxCjmg7hV9ycFTturkARgrIyskALAAADwA7Olc4AAAAdElEQVR4AS3BUQ7BQBRA0Xtf34wa+mUBYv9bIxJJS6qMH+cIIPYQ6IQWQBBAtuwk/sGTBDSKrggQoo4OawUenIxSbJ+isGDbAmy1RSmv5QAzcR5ajRy3nPpMZ0qoQTp5Fezk3rvtG+84MtOpyQUBvjd2E5UfYNob9chOOM4AAAAASUVORK5CYII=" alt="" width="16" height="11" style="width: 16px; height: 11px;"><span style="margin-left:0.3em;">&#1575;&#1604;&#1593;&#1585;&#1576;&#1610;&#1577;</span></a></li>
@@ -152,7 +206,7 @@ window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/15
 		</nav>
 		<div class="super-menu clearfix">
 			<div class="super-menu-inner">
-				<a href="#" id="pull" class="toggle-mobile-menu menu-toggle" aria-controls="secondary-menu" aria-expanded="false">Menu</a>
+				<a href="#" id="pull" class="toggle-mobile-menu menu-toggle" aria-controls="secondary-menu" aria-expanded="false">Men&uacute;</a>
 			</div>
 		</div>
 		<div id="mobile-menu-overlay"></div>
@@ -160,7 +214,7 @@ window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/15
 
 		<div class="content-wrap">
 		<div class="bottom-header-wrapper">
-			<img src="/wp-content/uploads/2025/03/cropped-me.jpg" alt="Zmalet El Emir Abdelkader">
+			<img width="640" height="266" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI2NDAiIGhlaWdodD0iMjY2Ij48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIj48YW5pbWF0ZSBhdHRyaWJ1dGVOYW1lPSJmaWxsIiB2YWx1ZXM9InJnYmEoMTUzLDE1MywxNTMsMC41KTtyZ2JhKDE1MywxNTMsMTUzLDAuMSk7cmdiYSgxNTMsMTUzLDE1MywwLjUpIiBkdXI9IjJzIiByZXBlYXRDb3VudD0iaW5kZWZpbml0ZSIgLz48L3JlY3Q+PC9zdmc+" alt="Zmalet El Emir Abdelkader" data-public-id="cropped-me/cropped-me.jpg" class="wp-post-0 wp-image-248" data-format="jpg" data-transformations="f_auto,q_auto" data-version="1742213653" data-seo="1" data-responsive="1" data-size="640 266" data-delivery="upload" onload=";window.CLDBind?CLDBind(this):null;" data-cloudinary="lazy">
 		</div>
 	</div>
 
@@ -191,7 +245,7 @@ window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/15
 				<div class="post-data-divider"></div>
 				<div class="post-data-positioning">
 					<div class="post-data-text">
-						<span class="posted-on">Posted on <a href="/es/historia/" rel="bookmark"><time class="entry-date published" datetime="2025-03-12T12:23:20+01:00">12 marzo 2025</time><time class="updated" datetime="2025-03-15T14:48:14+01:00">15 marzo 2025</time></a></span><span class="byline"> by <span class="author vcard"><a class="url fn n" href="/es/author/taguine_zea/">taguine_zea</a></span></span>					</div>
+						<span class="posted-on">Publicada el <a href="/es/historia/" rel="bookmark"><time class="entry-date published" datetime="2025-03-12T12:23:20+01:00">12 marzo 2025</time><time class="updated" datetime="2025-03-15T14:48:14+01:00">15 marzo 2025</time></a></span><span class="byline"> por <span class="author vcard"><a class="url fn n" href="/es/author/taguine_zea/">taguine_zea</a></span></span>					</div>
 				</div>
 			</div>
 		</div><!-- .entry-meta -->
@@ -216,7 +270,7 @@ window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/15
 				<div class="post-data-divider"></div>
 				<div class="post-data-positioning">
 					<div class="post-data-text">
-						<span class="posted-on">Posted on <a href="/es/situacion-geografica/" rel="bookmark"><time class="entry-date published" datetime="2025-03-09T13:56:26+01:00">9 marzo 2025</time><time class="updated" datetime="2025-03-15T14:50:50+01:00">15 marzo 2025</time></a></span><span class="byline"> by <span class="author vcard"><a class="url fn n" href="/es/author/taguine_zea/">taguine_zea</a></span></span>					</div>
+						<span class="posted-on">Publicada el <a href="/es/situacion-geografica/" rel="bookmark"><time class="entry-date published" datetime="2025-03-09T13:56:26+01:00">9 marzo 2025</time><time class="updated" datetime="2025-03-15T14:50:50+01:00">15 marzo 2025</time></a></span><span class="byline"> por <span class="author vcard"><a class="url fn n" href="/es/author/taguine_zea/">taguine_zea</a></span></span>					</div>
 				</div>
 			</div>
 		</div><!-- .entry-meta -->
@@ -241,14 +295,14 @@ window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/15
 				<div class="post-data-divider"></div>
 				<div class="post-data-positioning">
 					<div class="post-data-text">
-						<span class="posted-on">Posted on <a href="/es/poblacion-y-cultura/" rel="bookmark"><time class="entry-date published" datetime="2025-03-09T14:08:27+01:00">9 marzo 2025</time><time class="updated" datetime="2025-03-15T14:54:51+01:00">15 marzo 2025</time></a></span><span class="byline"> by <span class="author vcard"><a class="url fn n" href="/es/author/taguine_zea/">taguine_zea</a></span></span>					</div>
+						<span class="posted-on">Publicada el <a href="/es/poblacion-y-cultura/" rel="bookmark"><time class="entry-date published" datetime="2025-03-09T14:08:27+01:00">9 marzo 2025</time><time class="updated" datetime="2025-03-15T14:54:51+01:00">15 marzo 2025</time></a></span><span class="byline"> por <span class="author vcard"><a class="url fn n" href="/es/author/taguine_zea/">taguine_zea</a></span></span>					</div>
 				</div>
 			</div>
 		</div><!-- .entry-meta -->
 			</header><!-- .entry-header -->
 
 	<div class="entry-content">
-		<p>Poblaci&oacute;n y cultura de Z&rsquo;malet El &Eacute;mir Abdelkader B. Lengua y religi&oacute;n C. Fiestas y celebracionesFiestas religiosas: Celebraciones: Bodas tradicionales: D. M&uacute;sica y folclore &#127926;La m&uacute;sica tradicional de la regi&oacute;n est&aacute; influenciada por el cha&acirc;bi y el malhoun, estilos po&eacute;ticos y musicales populares en Argelia.En los festivales locales se suelen interpretar canciones y danzas folcl&oacute;ricas&hellip;</p>
+		<p>Poblaci&oacute;n y cultura de Z&rsquo;malet El &Eacute;mir Abdelkader B. Lengua y religi&oacute;n C. Fiestas y celebracionesFiestas religiosas: Celebraciones: Bodas tradicionales: D. M&uacute;sica y folclore &eth;&#159;&#142;&para;La m&uacute;sica tradicional de la regi&oacute;n est&aacute; influenciada por el cha&acirc;bi y el malhoun, estilos po&eacute;ticos y musicales populares en Argelia.En los festivales locales se suelen interpretar canciones y danzas folcl&oacute;ricas&hellip;</p>
 			<div class="text-center">
 				<a href="/es/poblacion-y-cultura/" class="blogpost-button">&rArr;</a>
 			</div>
@@ -266,14 +320,14 @@ window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/15
 				<div class="post-data-divider"></div>
 				<div class="post-data-positioning">
 					<div class="post-data-text">
-						<span class="posted-on">Posted on <a href="/es/servicios-administrativos/" rel="bookmark"><time class="entry-date published" datetime="2025-03-09T14:22:20+01:00">9 marzo 2025</time><time class="updated" datetime="2025-03-15T14:59:00+01:00">15 marzo 2025</time></a></span><span class="byline"> by <span class="author vcard"><a class="url fn n" href="/es/author/taguine_zea/">taguine_zea</a></span></span>					</div>
+						<span class="posted-on">Publicada el <a href="/es/servicios-administrativos/" rel="bookmark"><time class="entry-date published" datetime="2025-03-09T14:22:20+01:00">9 marzo 2025</time><time class="updated" datetime="2025-03-15T14:59:00+01:00">15 marzo 2025</time></a></span><span class="byline"> por <span class="author vcard"><a class="url fn n" href="/es/author/taguine_zea/">taguine_zea</a></span></span>					</div>
 				</div>
 			</div>
 		</div><!-- .entry-meta -->
 			</header><!-- .entry-header -->
 
 	<div class="entry-content">
-		<p>Los servicios administrativos del municipio Administraci&oacute;n de Z&rsquo;malet El Emir Abdelkader &#127963;&#65039; Wilaya: Tiaret (C&oacute;digo 14)Wilaya delegada: Ksar ChellalaC&oacute;digo Postal: 14038 Conclusi&oacute;nLa administraci&oacute;n de Z&rsquo;malet El &Eacute;mir Abdelkader desempe&ntilde;a un papel esencial en la gesti&oacute;n de los servicios p&uacute;blicos y el desarrollo local. Aunque el municipio es rural, las autoridades locales est&aacute;n trabajando para mejorar&hellip;</p>
+		<p>Los servicios administrativos del municipio Administraci&oacute;n de Z&rsquo;malet El Emir Abdelkader &eth;&#159;&#143;&#155;&#65039; Wilaya: Tiaret (C&oacute;digo 14)Wilaya delegada: Ksar ChellalaC&oacute;digo Postal: 14038 Conclusi&oacute;nLa administraci&oacute;n de Z&rsquo;malet El &Eacute;mir Abdelkader desempe&ntilde;a un papel esencial en la gesti&oacute;n de los servicios p&uacute;blicos y el desarrollo local. Aunque el municipio es rural, las autoridades locales est&aacute;n trabajando para mejorar&hellip;</p>
 			<div class="text-center">
 				<a href="/es/servicios-administrativos/" class="blogpost-button">&rArr;</a>
 			</div>
@@ -291,7 +345,7 @@ window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/15
 				<div class="post-data-divider"></div>
 				<div class="post-data-positioning">
 					<div class="post-data-text">
-						<span class="posted-on">Posted on <a href="/es/galeria/" rel="bookmark"><time class="entry-date published" datetime="2025-03-09T14:45:11+01:00">9 marzo 2025</time><time class="updated" datetime="2025-03-15T15:00:25+01:00">15 marzo 2025</time></a></span><span class="byline"> by <span class="author vcard"><a class="url fn n" href="/es/author/taguine_zea/">taguine_zea</a></span></span>					</div>
+						<span class="posted-on">Publicada el <a href="/es/galeria/" rel="bookmark"><time class="entry-date published" datetime="2025-03-09T14:45:11+01:00">9 marzo 2025</time><time class="updated" datetime="2025-03-15T15:00:25+01:00">15 marzo 2025</time></a></span><span class="byline"> por <span class="author vcard"><a class="url fn n" href="/es/author/taguine_zea/">taguine_zea</a></span></span>					</div>
 				</div>
 			</div>
 		</div><!-- .entry-meta -->
@@ -316,7 +370,7 @@ window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/15
 				<div class="post-data-divider"></div>
 				<div class="post-data-positioning">
 					<div class="post-data-text">
-						<span class="posted-on">Posted on <a href="/es/economia-local/" rel="bookmark"><time class="entry-date published" datetime="2025-03-09T14:16:50+01:00">9 marzo 2025</time><time class="updated" datetime="2025-03-15T15:05:44+01:00">15 marzo 2025</time></a></span><span class="byline"> by <span class="author vcard"><a class="url fn n" href="/es/author/taguine_zea/">taguine_zea</a></span></span>					</div>
+						<span class="posted-on">Publicada el <a href="/es/economia-local/" rel="bookmark"><time class="entry-date published" datetime="2025-03-09T14:16:50+01:00">9 marzo 2025</time><time class="updated" datetime="2025-03-15T15:05:44+01:00">15 marzo 2025</time></a></span><span class="byline"> por <span class="author vcard"><a class="url fn n" href="/es/author/taguine_zea/">taguine_zea</a></span></span>					</div>
 				</div>
 			</div>
 		</div><!-- .entry-meta -->
@@ -341,7 +395,7 @@ window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/15
 				<div class="post-data-divider"></div>
 				<div class="post-data-positioning">
 					<div class="post-data-text">
-						<span class="posted-on">Posted on <a href="/es/la-figura-historica-de-emir-abdelkader/" rel="bookmark"><time class="entry-date published" datetime="2025-03-09T14:28:34+01:00">9 marzo 2025</time><time class="updated" datetime="2025-03-15T15:07:52+01:00">15 marzo 2025</time></a></span><span class="byline"> by <span class="author vcard"><a class="url fn n" href="/es/author/taguine_zea/">taguine_zea</a></span></span>					</div>
+						<span class="posted-on">Publicada el <a href="/es/la-figura-historica-de-emir-abdelkader/" rel="bookmark"><time class="entry-date published" datetime="2025-03-09T14:28:34+01:00">9 marzo 2025</time><time class="updated" datetime="2025-03-15T15:07:52+01:00">15 marzo 2025</time></a></span><span class="byline"> por <span class="author vcard"><a class="url fn n" href="/es/author/taguine_zea/">taguine_zea</a></span></span>					</div>
 				</div>
 			</div>
 		</div><!-- .entry-meta -->
@@ -390,7 +444,7 @@ window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/15
 <div class="site-info">
 	&copy; 2025 Zmalet El Emir Abdelkader	<!-- Delete below lines to remove copyright from footer -->
 	<span class="footer-info-right">
-		 | Powered by <a href="https://superbthemes.com/minimalistblogger/" rel="nofollow noopener">Minimalist Blog</a> WordPress Theme	</span>
+		 | Funciona con <a href="https://superbthemes.com/minimalistblogger/" rel="nofollow noopener">Minimalist Blog</a> Tema para WordPress	</span>
 	<!-- Delete above lines to remove copyright from footer -->
 
 </div><!-- .site-info -->
@@ -404,6 +458,13 @@ window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/15
 <div id="smobile-menu" class="mobile-only"></div>
 <div id="mobile-menu-overlay"></div>
 
+<script type="text/javascript" src="/wp-content/plugins/simple-social-buttons/assets/js/frontend-blocks.js?ver=6.0.0" id="ssb-blocks-front-js-js"></script>
+<script type="text/javascript" id="ssb-front-js-js-extra">
+/* <![CDATA[ */
+var SSB = {"ajax_url":"\/wp-admin\/admin-ajax.php","fb_share_nonce":"10c9966c8a"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="/wp-content/plugins/simple-social-buttons/assets/js/front.js?ver=6.0.0" id="ssb-front-js-js"></script>
 <script type="text/javascript" src="/wp-content/themes/minimalistblogger/js/navigation.js?ver=20170823" id="minimalistblogger-navigation-js"></script>
 <script type="text/javascript" src="/wp-content/themes/minimalistblogger/js/skip-link-focus-fix.js?ver=20170823" id="minimalistblogger-skip-link-focus-fix-js"></script>
 <script type="text/javascript" src="/wp-content/themes/minimalistblogger/js/script.js?ver=20160720" id="minimalistblogger-script-js"></script>
