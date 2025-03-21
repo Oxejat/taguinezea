@@ -332,35 +332,58 @@ var CLDLB = {"image_delivery":"on","image_optimization":"on","image_format":"aut
 
 
 
-<div class="wp-block-contact-form-7-contact-form-selector">
-<div class="wpcf7 no-js" id="wpcf7-f643-p53-o1" lang="de-DE" dir="ltr" data-wpcf7-id="643">
-<div class="screen-reader-response"><p role="status" aria-live="polite" aria-atomic="true"></p> <ul></ul></div>
-<form action="/de/contact-3/#wpcf7-f643-p53-o1" method="post" class="wpcf7-form init" aria-label="Kontaktformular" novalidate="novalidate" data-status="init">
-<div style="display: none;">
-<input type="hidden" name="_wpcf7" value="643">
-<input type="hidden" name="_wpcf7_version" value="6.0.5">
-<input type="hidden" name="_wpcf7_locale" value="de_DE">
-<input type="hidden" name="_wpcf7_unit_tag" value="wpcf7-f643-p53-o1">
-<input type="hidden" name="_wpcf7_container_post" value="53">
-<input type="hidden" name="_wpcf7_posted_data_hash" value="">
-</div>
-<p><label> Achternaam Voornaam<br>
-<span class="wpcf7-form-control-wrap" data-name="your-name"><input size="40" maxlength="400" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" autocomplete="name" aria-required="true" aria-invalid="false" value="" type="text" name="your-name"></span> </label>
-</p>
-<p><label> Adres<br>
-<span class="wpcf7-form-control-wrap" data-name="your-email"><input size="40" maxlength="400" class="wpcf7-form-control wpcf7-email wpcf7-validates-as-required wpcf7-text wpcf7-validates-as-email" autocomplete="email" aria-required="true" aria-invalid="false" value="" type="email" name="your-email"></span> </label>
-</p>
-<p><label> Onderwerp<br>
-<span class="wpcf7-form-control-wrap" data-name="your-subject"><input size="40" maxlength="400" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" aria-required="true" aria-invalid="false" value="" type="text" name="your-subject"></span> </label>
-</p>
-<p><label> Bericht<br>
-<span class="wpcf7-form-control-wrap" data-name="your-message"><textarea cols="40" rows="10" maxlength="2000" class="wpcf7-form-control wpcf7-textarea" aria-invalid="false" name="your-message"></textarea></span> </label>
-</p>
-<p><input class="wpcf7-form-control wpcf7-submit has-spinner" type="submit" value="Submit">
-</p><p style="display: none !important;" class="akismet-fields-container" data-prefix="_wpcf7_ak_"><label>&Delta;<textarea name="_wpcf7_ak_hp_textarea" cols="45" rows="8" maxlength="100"></textarea></label><input type="hidden" id="ak_js_1" name="_wpcf7_ak_js" value="2"><script>document.getElementById( "ak_js_1" ).setAttribute( "value", ( new Date() ).getTime() );</script></p><div class="wpcf7-response-output" aria-hidden="true"></div>
+<form action="https://formspree.io/f/mpwpprvo" method="POST">
+  <label>
+    Naam:
+    <input type="text" name="name">
+  </label>
+  <label>
+    E-mailadres:
+    <input type="email" name="email">
+  </label>
+  <label>
+    Bericht:
+    <textarea name="message"></textarea>
+  </label>
+  <!-- your other form fields go here -->
+  <button type="submit">Stuur</button>
 </form>
-</div>
-</div>
+<style>
+#contact-form {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+button {
+  background-color: #d3a655;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #d3a655;
+}
+</style>
 <div class="simplesocialbuttons simplesocial-round-icon simplesocialbuttons_inline simplesocialbuttons-align-left post-53 page  simplesocialbuttons-inline-right-in">
 <button class="simplesocial-fb-share" rel="nofollow" target="_blank" aria-label="Facebook Share" data-href="https://www.facebook.com/sharer/sharer.php?u=/de/contact-3/" onclick="javascript:window.open(this.dataset.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;"><span class="simplesocialtxt">Facebook </span> </button>
 <button class="simplesocial-msng-share" rel="nofollow" target="_blank" aria-label="Facebook Messenger Share" onclick="javascript:window.open( this.dataset.href, '_blank',  'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600' );return false;" data-href="http://www.facebook.com/dialog/send?app_id=891268654262273&amp;redirect_uri=%2Fde%2Fcontact-3%2F&amp;link=%2Fde%2Fcontact-3%2F&amp;display=popup"><span class="simplesocialtxt">Messenger</span></button> 
@@ -451,7 +474,7 @@ var wpcf7 = {
 <script type="text/javascript" src="/wp-content/plugins/contact-form-7/includes/js/index.js?ver=6.0.5" id="contact-form-7-js"></script>
 <script type="text/javascript" id="ssb-front-js-js-extra">
 /* <![CDATA[ */
-var SSB = {"ajax_url":"\/wp-admin\/admin-ajax.php","fb_share_nonce":"6224454a25"};
+var SSB = {"ajax_url":"\/wp-admin\/admin-ajax.php","fb_share_nonce":"c65ef09692"};
 /* ]]> */
 </script>
 <script type="text/javascript" src="/wp-content/plugins/simple-social-buttons/assets/js/front.js?ver=6.0.0" id="ssb-front-js-js"></script>
@@ -460,7 +483,6 @@ var SSB = {"ajax_url":"\/wp-admin\/admin-ajax.php","fb_share_nonce":"6224454a25"
 <script type="text/javascript" src="/wp-content/themes/minimalistblogger/js/script.js?ver=20160720" id="minimalistblogger-script-js"></script>
 <script type="text/javascript" src="/wp-content/themes/minimalistblogger/js/jquery.flexslider.js?ver=20150423" id="flexslider-js"></script>
 <script type="text/javascript" src="/wp-content/themes/minimalistblogger/js/accessibility.js?ver=20160720" id="minimalistblogger-accessibility-js"></script>
-<script defer type="text/javascript" src="/wp-content/plugins/akismet/_inc/akismet-frontend.js?ver=1741790449" id="akismet-frontend-js"></script>
 <script type="text/javascript">
 		document.addEventListener("DOMContentLoaded", function() {
 			var if_ssb_exist = document.getElementsByClassName( "simplesocialbuttons" ).length > 0;
