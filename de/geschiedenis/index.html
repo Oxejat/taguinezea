@@ -54,7 +54,7 @@ window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/15
 <link rel="stylesheet" id="minimalistblogger-google-fonts-css" href="https://fonts.googleapis.com/css?family=Lato%3A300%2C400%2C700%2C900%7CMerriweather%3A400%2C700&amp;ver=6.7.2" type="text/css" media="all">
 <script type="text/javascript">
 /* <![CDATA[ */
-var CLDLB = {"image_delivery":"on","image_optimization":"on","image_format":"auto","image_quality":"auto","image_freeform":"","svg_support":"off","crop_sizes":"","image_preview":"https:\/\/res.cloudinary.com\/demo\/image\/upload\/w_600\/sample.jpg","video_delivery":"on","video_player":"wp","adaptive_streaming":"off","adaptive_streaming_mode":"mpd","video_controls":"on","video_loop":"off","video_autoplay_mode":"off","video_optimization":"on","video_format":"auto","video_quality":"auto","video_freeform":"","video_preview":"","use_lazy_load":"on","lazy_threshold":"100px","lazy_custom_color":"rgba(153,153,153,0.5)","lazy_animate":"on","lazy_placeholder":"blur","dpr":"2X","lazyload_preview":"https:\/\/res.cloudinary.com\/demo\/image\/upload\/w_600\/sample.jpg","enable_breakpoints":"on","pixel_step":200,"breakpoints":"","max_width":2048,"min_width":200,"breakpoints_preview":"https:\/\/res.cloudinary.com\/demo\/image\/upload\/w_600\/sample.jpg","overlay":"on","placeholder":"e_blur:2000,q_1,f_auto","base_url":"https:\/\/res.cloudinary.com\/dgjtact77"};!function(){const e={deviceDensity:window.devicePixelRatio?window.devicePixelRatio:"auto",density:null,config:CLDLB||{},lazyThreshold:0,enabled:!1,sizeBands:[],iObserver:null,pObserver:null,rObserver:null,aboveFold:!0,minPlaceholderThreshold:500,bind(e){e.CLDbound=!0,this.enabled||this._init();const t=e.dataset.size.split(" ");e.originalWidth=t[0],e.originalHeight=t[1],this.pObserver?(this.aboveFold&&this.inInitialView(e)?this.buildImage(e):(this.pObserver.observe(e),this.iObserver.observe(e)),e.addEventListener("error",(t=>{e.srcset="",e.src='data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg"><rect width="100%" height="100%" fill="rgba(0,0,0,0.1)"/><text x="50%" y="50%" fill="red" text-anchor="middle" dominant-baseline="middle">%26%23x26A0%3B&#65038;',this.rObserver.unobserve(e)}))):this.setupFallback(e)},buildImage(e){e.dataset.srcset?(e.cld_loaded=!0,e.srcset=e.dataset.srcset):(e.src=this.getSizeURL(e),e.dataset.responsive&&this.rObserver.observe(e))},inInitialView(e){const t=e.getBoundingClientRect();return this.aboveFold=t.top<window.innerHeight+this.lazyThreshold,this.aboveFold},setupFallback(e){const t=[];this.sizeBands.forEach((i=>{if(i<=e.originalWidth){let s=this.getSizeURL(e,i,!0)+` ${i}w`;-1===t.indexOf(s)&&t.push(s)}})),e.srcset=t.join(","),e.sizes=`(max-width: ${e.originalWidth}px) 100vw, ${e.originalWidth}px`},_init(){this.enabled=!0,this._calcThreshold(),this._getDensity();let e=parseInt(this.config.max_width);const t=parseInt(this.config.min_width),i=parseInt(this.config.pixel_step);for(;e-i>=t;)e-=i,this.sizeBands.push(e);"undefined"!=typeof IntersectionObserver&&this._setupObservers(),this.enabled=!0},_setupObservers(){const e={rootMargin:this.lazyThreshold+"px 0px "+this.lazyThreshold+"px 0px"},t=this.minPlaceholderThreshold<2*this.lazyThreshold?2*this.lazyThreshold:this.minPlaceholderThreshold,i={rootMargin:t+"px 0px "+t+"px 0px"};this.rObserver=new ResizeObserver(((e,t)=>{e.forEach((e=>{e.target.cld_loaded&&e.contentRect.width>=e.target.cld_loaded&&(e.target.src=this.getSizeURL(e.target))}))})),this.iObserver=new IntersectionObserver(((e,t)=>{e.forEach((e=>{e.isIntersecting&&(this.buildImage(e.target),t.unobserve(e.target),this.pObserver.unobserve(e.target))}))}),e),this.pObserver=new IntersectionObserver(((e,t)=>{e.forEach((e=>{e.isIntersecting&&(e.target.src=this.getPlaceholderURL(e.target),t.unobserve(e.target))}))}),i)},_calcThreshold(){const e=this.config.lazy_threshold.replace(/[^0-9]/g,"");let t=0;switch(this.config.lazy_threshold.replace(/[0-9]/g,"").toLowerCase()){case"em":t=parseFloat(getComputedStyle(document.body).fontSize)*e;break;case"rem":t=parseFloat(getComputedStyle(document.documentElement).fontSize)*e;break;case"vh":t=window.innerHeight/e*100;break;default:t=e}this.lazyThreshold=parseInt(t,10)},_getDensity(){let e=this.config.dpr?this.config.dpr.replace("X",""):"off";if("off"===e)return this.density=1,1;let t=this.deviceDensity;"max"!==e&&"auto"!==t&&(e=parseFloat(e),t=t>Math.ceil(e)?e:t),this.density=t},scaleWidth(e,t,i){const s=parseInt(this.config.max_width),r=Math.round(s/i);if(!t){t=e.width;let a=Math.round(t/i);for(;-1===this.sizeBands.indexOf(t)&&a<r&&t<s;)t++,a=Math.round(t/i)}return t>s&&(t=s),e.originalWidth<t&&(t=e.originalWidth),t},scaleSize(e,t,i){const s=e.dataset.crop?parseFloat(e.dataset.crop):(e.originalWidth/e.originalHeight).toFixed(2),r=this.scaleWidth(e,t,s),a=Math.round(r/s),o=[];return e.dataset.transformationCrop?o.push(e.dataset.transformationCrop):e.dataset.crop||(o.push(e.dataset.crop?"c_fill":"c_scale"),e.dataset.crop&&o.push("g_auto")),o.push("w_"+r),o.push("h_"+a),i&&1!==this.density&&o.push("dpr_"+this.density),e.cld_loaded=r,{transformation:o.join(","),nameExtension:r+"x"+a}},getDeliveryMethod:e=>e.dataset.seo&&"upload"===e.dataset.delivery?"images":"image/"+e.dataset.delivery,getSizeURL(e,t){const i=this.scaleSize(e,t,!0);return[this.config.base_url,this.getDeliveryMethod(e),"upload"===e.dataset.delivery?i.transformation:"",e.dataset.transformations,"v"+e.dataset.version,e.dataset.publicId+"?_i=AA"].filter(this.empty).join("/")},getPlaceholderURL(e){e.cld_placehold=!0;const t=this.scaleSize(e,null,!1);return[this.config.base_url,this.getDeliveryMethod(e),t.transformation,this.config.placeholder,e.dataset.publicId].filter(this.empty).join("/")},empty:e=>void 0!==e&&0!==e.length};window.CLDBind=t=>{t.CLDbound||e.bind(t)},window.initFallback=()=>{[...document.querySelectorAll('img[data-cloudinary="lazy"]')].forEach((e=>{CLDBind(e)}))},window.addEventListener("load",(()=>{initFallback()})),document.querySelector('script[src*="?cloudinary_lazy_load_loader"]')&&initFallback()}();
+var CLDLB = {"image_delivery":"on","image_optimization":"on","image_format":"auto","image_quality":"auto","image_freeform":"","svg_support":"off","crop_sizes":"","image_preview":"https:\/\/res.cloudinary.com\/demo\/image\/upload\/w_600\/sample.jpg","video_delivery":"on","video_player":"wp","adaptive_streaming":"off","adaptive_streaming_mode":"mpd","video_controls":"on","video_loop":"off","video_autoplay_mode":"off","video_optimization":"on","video_format":"auto","video_quality":"auto","video_freeform":"","video_preview":"","use_lazy_load":"on","lazy_threshold":"100px","lazy_custom_color":"rgba(153,153,153,0.5)","lazy_animate":"on","lazy_placeholder":"blur","dpr":"2X","lazyload_preview":"https:\/\/res.cloudinary.com\/demo\/image\/upload\/w_600\/sample.jpg","enable_breakpoints":"on","pixel_step":200,"breakpoints":"","max_width":2048,"min_width":200,"breakpoints_preview":"https:\/\/res.cloudinary.com\/demo\/image\/upload\/w_600\/sample.jpg","overlay":"off","placeholder":"e_blur:2000,q_1,f_auto","base_url":"https:\/\/res.cloudinary.com\/dgjtact77"};!function(){const e={deviceDensity:window.devicePixelRatio?window.devicePixelRatio:"auto",density:null,config:CLDLB||{},lazyThreshold:0,enabled:!1,sizeBands:[],iObserver:null,pObserver:null,rObserver:null,aboveFold:!0,minPlaceholderThreshold:500,bind(e){e.CLDbound=!0,this.enabled||this._init();const t=e.dataset.size.split(" ");e.originalWidth=t[0],e.originalHeight=t[1],this.pObserver?(this.aboveFold&&this.inInitialView(e)?this.buildImage(e):(this.pObserver.observe(e),this.iObserver.observe(e)),e.addEventListener("error",(t=>{e.srcset="",e.src='data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg"><rect width="100%" height="100%" fill="rgba(0,0,0,0.1)"/><text x="50%" y="50%" fill="red" text-anchor="middle" dominant-baseline="middle">%26%23x26A0%3B&#65038;',this.rObserver.unobserve(e)}))):this.setupFallback(e)},buildImage(e){e.dataset.srcset?(e.cld_loaded=!0,e.srcset=e.dataset.srcset):(e.src=this.getSizeURL(e),e.dataset.responsive&&this.rObserver.observe(e))},inInitialView(e){const t=e.getBoundingClientRect();return this.aboveFold=t.top<window.innerHeight+this.lazyThreshold,this.aboveFold},setupFallback(e){const t=[];this.sizeBands.forEach((i=>{if(i<=e.originalWidth){let s=this.getSizeURL(e,i,!0)+` ${i}w`;-1===t.indexOf(s)&&t.push(s)}})),e.srcset=t.join(","),e.sizes=`(max-width: ${e.originalWidth}px) 100vw, ${e.originalWidth}px`},_init(){this.enabled=!0,this._calcThreshold(),this._getDensity();let e=parseInt(this.config.max_width);const t=parseInt(this.config.min_width),i=parseInt(this.config.pixel_step);for(;e-i>=t;)e-=i,this.sizeBands.push(e);"undefined"!=typeof IntersectionObserver&&this._setupObservers(),this.enabled=!0},_setupObservers(){const e={rootMargin:this.lazyThreshold+"px 0px "+this.lazyThreshold+"px 0px"},t=this.minPlaceholderThreshold<2*this.lazyThreshold?2*this.lazyThreshold:this.minPlaceholderThreshold,i={rootMargin:t+"px 0px "+t+"px 0px"};this.rObserver=new ResizeObserver(((e,t)=>{e.forEach((e=>{e.target.cld_loaded&&e.contentRect.width>=e.target.cld_loaded&&(e.target.src=this.getSizeURL(e.target))}))})),this.iObserver=new IntersectionObserver(((e,t)=>{e.forEach((e=>{e.isIntersecting&&(this.buildImage(e.target),t.unobserve(e.target),this.pObserver.unobserve(e.target))}))}),e),this.pObserver=new IntersectionObserver(((e,t)=>{e.forEach((e=>{e.isIntersecting&&(e.target.src=this.getPlaceholderURL(e.target),t.unobserve(e.target))}))}),i)},_calcThreshold(){const e=this.config.lazy_threshold.replace(/[^0-9]/g,"");let t=0;switch(this.config.lazy_threshold.replace(/[0-9]/g,"").toLowerCase()){case"em":t=parseFloat(getComputedStyle(document.body).fontSize)*e;break;case"rem":t=parseFloat(getComputedStyle(document.documentElement).fontSize)*e;break;case"vh":t=window.innerHeight/e*100;break;default:t=e}this.lazyThreshold=parseInt(t,10)},_getDensity(){let e=this.config.dpr?this.config.dpr.replace("X",""):"off";if("off"===e)return this.density=1,1;let t=this.deviceDensity;"max"!==e&&"auto"!==t&&(e=parseFloat(e),t=t>Math.ceil(e)?e:t),this.density=t},scaleWidth(e,t,i){const s=parseInt(this.config.max_width),r=Math.round(s/i);if(!t){t=e.width;let a=Math.round(t/i);for(;-1===this.sizeBands.indexOf(t)&&a<r&&t<s;)t++,a=Math.round(t/i)}return t>s&&(t=s),e.originalWidth<t&&(t=e.originalWidth),t},scaleSize(e,t,i){const s=e.dataset.crop?parseFloat(e.dataset.crop):(e.originalWidth/e.originalHeight).toFixed(2),r=this.scaleWidth(e,t,s),a=Math.round(r/s),o=[];return e.dataset.transformationCrop?o.push(e.dataset.transformationCrop):e.dataset.crop||(o.push(e.dataset.crop?"c_fill":"c_scale"),e.dataset.crop&&o.push("g_auto")),o.push("w_"+r),o.push("h_"+a),i&&1!==this.density&&o.push("dpr_"+this.density),e.cld_loaded=r,{transformation:o.join(","),nameExtension:r+"x"+a}},getDeliveryMethod:e=>e.dataset.seo&&"upload"===e.dataset.delivery?"images":"image/"+e.dataset.delivery,getSizeURL(e,t){const i=this.scaleSize(e,t,!0);return[this.config.base_url,this.getDeliveryMethod(e),"upload"===e.dataset.delivery?i.transformation:"",e.dataset.transformations,"v"+e.dataset.version,e.dataset.publicId+"?_i=AA"].filter(this.empty).join("/")},getPlaceholderURL(e){e.cld_placehold=!0;const t=this.scaleSize(e,null,!1);return[this.config.base_url,this.getDeliveryMethod(e),t.transformation,this.config.placeholder,e.dataset.publicId].filter(this.empty).join("/")},empty:e=>void 0!==e&&0!==e.length};window.CLDBind=t=>{t.CLDbound||e.bind(t)},window.initFallback=()=>{[...document.querySelectorAll('img[data-cloudinary="lazy"]')].forEach((e=>{CLDBind(e)}))},window.addEventListener("load",(()=>{initFallback()})),document.querySelector('script[src*="?cloudinary_lazy_load_loader"]')&&initFallback()}();
 /* ]]> */
 </script>
 <script type="text/javascript" src="/wp-includes/js/jquery/jquery.min.js?ver=3.7.1" id="jquery-core-js"></script>
@@ -99,26 +99,28 @@ var CLDLB = {"image_delivery":"on","image_optimization":"on","image_format":"aut
 
 <!-- Open Graph Meta Tags generated by Simple Social Buttons 6.0.0 -->
 <meta property="og:title" content="Geschiedenis - Zmalet El Emir Abdelkader">
-<meta property="og:description" content="Geschichte von Z&rsquo;malet El &Eacute;mir Abdelkader (ehemals Taguine) Die Region wurde seit der Antike von den Gaetuli besucht, die fernab r&ouml;mischer und byzantinischer Einfl&uuml;sse ein nomadisches Leben f&uuml;hrten und ein riesiges Gebiet durchquerten, das sich von Mauretanien bis Tunesien erstreckte. Diese kriegerischen V&ouml;lker f&uuml;hrten Raubz&uuml;ge durch und gerieten h&auml;ufig in Konflikt mit den romanisierten Berbern von Tell und der r&ouml;mischen&hellip;">
+<meta property="og:description" content="Geschiedenis van Z'malet El &Eacute;mir Abdelkader (voorheen Taguine)Sinds de oudheid werd de regio bezocht door de&nbsp;&nbsp;Gaetuli&nbsp;&nbsp;, die, ver weg van de Romeinse en Byzantijnse invloeden, een nomadisch bestaan &#8203;&#8203;leidden en door een uitgestrekt gebied trokken dat zich uitstrekte van Mauritani&euml; tot Tunesi&euml;. Deze oorlogszuchtige volkeren voerden strooptochten uit en kwamen vaak in conflict met de geromaniseerde Berbers van Tell en&hellip;">
 <meta property="og:url" content="/de/geschiedenis/">
 <meta property="og:site_name" content="Zmalet El Emir Abdelkader">
 <meta property="og:image" content="https://taguine14.netlify.app/_next/image?url=%2Fimages%2FMausol%25C3%25A9e_des_Rois_numides_dit_le_Medracen.jpg&amp;w=3840&amp;q=75">
 <meta property="og:image" content="https://taguine14.netlify.app/_next/image?url=%2Fimages%2F1000007658.png&amp;w=3840&amp;q=75">
 <meta property="og:image" content="https://taguine14.netlify.app/_next/image?url=%2Fimages%2F1000007656.png&amp;w=3840&amp;q=75">
 <meta property="og:image" content="https://taguine14.netlify.app/_next/image?url=%2Fimages%2FSmala_of_Abd_El-Kader_16_May_1843.jpg&amp;w=3840&amp;q=75">
-<meta property="og:image" content="https://res.cloudinary.com/dgjtact77/images/w_1024,h_1012,c_scale/f_auto,q_auto/v1742738307/Plan_de_la_smala_dAbdelkader_1843/Plan_de_la_smala_dAbdelkader_1843.jpg?_i=AA">
+<meta property="og:image" content="https://res.cloudinary.com/dgjtact77/images/f_auto,q_auto/v1742738313/Plan_de_la_smala_dAbdelkader_1843_756ae41d/Plan_de_la_smala_dAbdelkader_1843_756ae41d.jpg?_i=AA">
 <meta property="og:image" content="https://taguine14.netlify.app/_next/image?url=%2Fimages%2FSmala%2520Emir%2520Abdelkader%2520-%2520Horace%2520Vernet.jpg&amp;w=3840&amp;q=75">
-<meta property="og:image" content="https://taguine14.netlify.app/_next/image?url=%2Fimages%2Fpict0058.jpg&amp;w=3840&amp;q=75">
+<meta property="og:image" content="https://res.cloudinary.com/dgjtact77/images/f_auto,q_auto/v1742213544/pict0058/pict0058.jpg?_i=AA">
+<meta property="og:image" content="https://res.cloudinary.com/dgjtact77/images/w_801,h_1024,c_scale/f_auto,q_auto/v1743864070/Monument_2/Monument_2.jpg?_i=AA">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:description" content="Geschichte von Z&rsquo;malet El &Eacute;mir Abdelkader (ehemals Taguine) Die Region wurde seit der Antike von den Gaetuli besucht, die fernab r&ouml;mischer und byzantinischer Einfl&uuml;sse ein nomadisches Leben f&uuml;hrten und ein riesiges Gebiet durchquerten, das sich von Mauretanien bis Tunesien erstreckte. Diese kriegerischen V&ouml;lker f&uuml;hrten Raubz&uuml;ge durch und gerieten h&auml;ufig in Konflikt mit den romanisierten Berbern von Tell und der r&ouml;mischen&hellip;">
+<meta name="twitter:description" content="Geschiedenis van Z'malet El &Eacute;mir Abdelkader (voorheen Taguine)Sinds de oudheid werd de regio bezocht door de&nbsp;&nbsp;Gaetuli&nbsp;&nbsp;, die, ver weg van de Romeinse en Byzantijnse invloeden, een nomadisch bestaan &#8203;&#8203;leidden en door een uitgestrekt gebied trokken dat zich uitstrekte van Mauritani&euml; tot Tunesi&euml;. Deze oorlogszuchtige volkeren voerden strooptochten uit en kwamen vaak in conflict met de geromaniseerde Berbers van Tell en&hellip;">
 <meta name="twitter:title" content="Geschiedenis - Zmalet El Emir Abdelkader">
 <meta property="twitter:image" content="https://taguine14.netlify.app/_next/image?url=%2Fimages%2FMausol%25C3%25A9e_des_Rois_numides_dit_le_Medracen.jpg&amp;w=3840&amp;q=75">
 <meta property="twitter:image" content="https://taguine14.netlify.app/_next/image?url=%2Fimages%2F1000007658.png&amp;w=3840&amp;q=75">
 <meta property="twitter:image" content="https://taguine14.netlify.app/_next/image?url=%2Fimages%2F1000007656.png&amp;w=3840&amp;q=75">
 <meta property="twitter:image" content="https://taguine14.netlify.app/_next/image?url=%2Fimages%2FSmala_of_Abd_El-Kader_16_May_1843.jpg&amp;w=3840&amp;q=75">
-<meta property="twitter:image" content="https://res.cloudinary.com/dgjtact77/images/w_1024,h_1012,c_scale/f_auto,q_auto/v1742738307/Plan_de_la_smala_dAbdelkader_1843/Plan_de_la_smala_dAbdelkader_1843.jpg?_i=AA">
+<meta property="twitter:image" content="https://res.cloudinary.com/dgjtact77/images/f_auto,q_auto/v1742738313/Plan_de_la_smala_dAbdelkader_1843_756ae41d/Plan_de_la_smala_dAbdelkader_1843_756ae41d.jpg?_i=AA">
 <meta property="twitter:image" content="https://taguine14.netlify.app/_next/image?url=%2Fimages%2FSmala%2520Emir%2520Abdelkader%2520-%2520Horace%2520Vernet.jpg&amp;w=3840&amp;q=75">
-<meta property="twitter:image" content="https://taguine14.netlify.app/_next/image?url=%2Fimages%2Fpict0058.jpg&amp;w=3840&amp;q=75">
+<meta property="twitter:image" content="https://res.cloudinary.com/dgjtact77/images/f_auto,q_auto/v1742213544/pict0058/pict0058.jpg?_i=AA">
+<meta property="twitter:image" content="https://res.cloudinary.com/dgjtact77/images/w_801,h_1024,c_scale/f_auto,q_auto/v1743864070/Monument_2/Monument_2.jpg?_i=AA">
 
 		<style type="text/css">
 		.blogpost-button, .wp-block-search .wp-block-search__button, .comments-area p.form-submit input, .post-data-divider { background: #d3a655; }
@@ -238,7 +240,7 @@ var CLDLB = {"image_delivery":"on","image_optimization":"on","image_format":"aut
 				<div class="post-data-divider"></div>
 				<div class="post-data-positioning">
 					<div class="post-data-text">
-						<span class="posted-on">Posted on <a href="/de/geschiedenis/" rel="bookmark"><time class="entry-date published" datetime="2025-03-12T12:33:22+01:00">12 M&auml;rz 2025</time><time class="updated" datetime="2025-03-23T15:19:37+01:00">23 M&auml;rz 2025</time></a></span><span class="byline"> by <span class="author vcard"><a class="url fn n" href="/de/author/taguine_zea/">Zea Admin</a></span></span>					</div>
+						<span class="posted-on">Posted on <a href="/de/geschiedenis/" rel="bookmark"><time class="entry-date published" datetime="2025-03-12T12:33:22+01:00">12 M&auml;rz 2025</time><time class="updated" datetime="2025-04-08T17:36:24+02:00">8 April 2025</time></a></span><span class="byline"> by <span class="author vcard"><a class="url fn n" href="/de/author/taguine_zea/">Zea Admin</a></span></span>					</div>
 				</div>
 			</div>
 		</div><!-- .entry-meta -->
@@ -246,112 +248,207 @@ var CLDLB = {"image_delivery":"on","image_optimization":"on","image_format":"aut
 
 	<div class="entry-content">
 		
-<p><strong>Geschichte von Z&rsquo;malet El &Eacute;mir Abdelkader (ehemals Taguine)</strong></p>
+<p><strong>Geschiedenis van Z&rsquo;malet El &Eacute;mir Abdelkader (voorheen Taguine)</strong><br><br>Sinds de oudheid werd de regio bezocht door de&nbsp;&nbsp;<strong>Gaetuli</strong>&nbsp;&nbsp;, die, ver weg van de Romeinse en Byzantijnse invloeden, een nomadisch bestaan &#8203;&#8203;leidden en door een uitgestrekt gebied trokken dat zich uitstrekte van Mauritani&euml; tot Tunesi&euml;. Deze oorlogszuchtige volkeren voerden strooptochten uit en kwamen vaak in conflict met de geromaniseerde Berbers van Tell en de Romeinse of Byzantijnse autoriteiten.</p>
 
 
 
-<p>Die Region wurde seit der Antike von den Gaetuli besucht, die fernab r&ouml;mischer und byzantinischer Einfl&uuml;sse ein nomadisches Leben f&uuml;hrten und ein riesiges Gebiet durchquerten, das sich von Mauretanien bis Tunesien erstreckte. Diese kriegerischen V&ouml;lker f&uuml;hrten Raubz&uuml;ge durch und gerieten h&auml;ufig in Konflikt mit den romanisierten Berbern von Tell und der r&ouml;mischen oder byzantinischen Obrigkeit.</p>
-
-
-<div class="wp-block-image">
-<figure class="aligncenter size-large"><a class="glightbox" href="https://taguine14.netlify.app/_next/image?url=%2Fimages%2FMausol%25C3%25A9e_des_Rois_numides_dit_le_Medracen.jpg&amp;w=3840&amp;q=75"><img decoding="async" src="https://taguine14.netlify.app/_next/image?url=%2Fimages%2FMausol%25C3%25A9e_des_Rois_numides_dit_le_Medracen.jpg&amp;w=3840&amp;q=75" alt=""></a></figure></div>
-
-
-<p class="has-text-align-center"><em>Das numidische Mausoleum von Medracen aus dem 3. Jahrhundert.</em></p>
+<figure class="wp-block-image"><a href="https://taguine14.netlify.app/_next/image?url=%2Fimages%2FMausol%25C3%25A9e_des_Rois_numides_dit_le_Medracen.jpg&amp;w=3840&amp;q=75"><img decoding="async" src="https://taguine14.netlify.app/_next/image?url=%2Fimages%2FMausol%25C3%25A9e_des_Rois_numides_dit_le_Medracen.jpg&amp;w=3840&amp;q=75" alt=""></a></figure>
 
 
 
-<p>Nach der Islamisierung des zentralen Maghreb wurde diese Region zum Territorium der Zenata. Anschlie&szlig;end geriet die Region unter die Herrschaft der Rostemides (707&ndash;909).</p>
-
-
-<div class="wp-block-image">
-<figure class="aligncenter size-large"><a class="glightbox" href="https://taguine14.netlify.app/_next/image?url=%2Fimages%2F1000007658.png&amp;w=3840&amp;q=75"><img decoding="async" src="https://taguine14.netlify.app/_next/image?url=%2Fimages%2F1000007658.png&amp;w=3840&amp;q=75" alt=""></a></figure></div>
-
-
-<p class="has-text-align-center"><em>Die Rostemid-Dynastie</em></p>
+<p><em>Het Numidische mausoleum uit Medracen dateert uit de 3e eeuw.</em></p>
 
 
 
-<p><strong>Osmanische Zeit</strong><br>W&auml;hrend der osmanischen &Auml;ra dehnte das Beylik von Titteri (1546&ndash;1834), dessen Hauptstadt Medea war, seine Herrschaft &uuml;ber die gesamte Hochebenenregion aus.</p>
-
-
-<div class="wp-block-image">
-<figure class="aligncenter size-large"><a class="glightbox" href="https://taguine14.netlify.app/_next/image?url=%2Fimages%2F1000007656.png&amp;w=3840&amp;q=75"><img decoding="async" src="https://taguine14.netlify.app/_next/image?url=%2Fimages%2F1000007656.png&amp;w=3840&amp;q=75" alt=""></a></figure></div>
-
-
-<p class="has-text-align-center"><em>Die Provinzen der Regentschaft Algier</em></p>
+<p>De geschiedenis van de regio&nbsp;<strong>Titteri</strong>&nbsp;is dan ook nauw verbonden met die van de centrale Maghreb, die van de 2e tot de 5e eeuw&nbsp;werd gekenmerkt door opeenvolgende invasies door de&nbsp;<strong>Romeinen</strong><br>. Ook de&nbsp;<strong>Vandalen</strong>&nbsp;lieten hun sporen na, zonder dat ze er een kolonisatie konden realiseren.<br>De&nbsp;<strong>Byzantijnen</strong>&nbsp;ondervonden op hun beurt weerstand van de inheemse stammen.<br><strong>Numidi&euml;rs</strong>&nbsp;,&nbsp;<strong>Moren</strong>&nbsp;en&nbsp;<strong>Gaetuli</strong>&nbsp;werden de&nbsp;<strong>Zenetes</strong>&nbsp;dankzij de vermenging die in die tijd tussen de verschillende stammen plaatsvond</p>
 
 
 
-<p><strong>Herkunft und Entwicklung des Namens</strong><br>Die Gemeinde Z&rsquo;malet El &Eacute;mir Abdelkader in der Wilaya Tiaret war fr&uuml;her als Taguine bekannt. Die Umbenennung erfolgte zu Ehren von Emir Abdelkader, einer symboltr&auml;chtigen Figur des algerischen Widerstands gegen die franz&ouml;sische Kolonialisierung im 19. Jahrhundert.</p>
+<p>Na de islamisering van de centrale Maghreb werd dit gebied het grondgebied van de&nbsp;&nbsp;<strong>Zenata</strong>&nbsp;. De regio kwam vervolgens onder het bewind van de&nbsp;&nbsp;<strong>Rostemiden</strong>&nbsp;&nbsp;(707-909).</p>
 
 
 
-<p>Das Wort &bdquo;Z&rsquo;malet&ldquo; bezieht sich auf die Zmalas, die Wanderlager, in denen die Familien, K&auml;mpfer und Besitzt&uuml;mer von Emir Abdelkader w&auml;hrend seines Kampfes gegen die franz&ouml;sische Armee zusammenkamen.</p>
+<figure class="wp-block-image"><a href="https://taguine14.netlify.app/_next/image?url=%2Fimages%2F1000007658.png&amp;w=3840&amp;q=75"><img decoding="async" src="https://taguine14.netlify.app/_next/image?url=%2Fimages%2F1000007658.png&amp;w=3840&amp;q=75" alt=""></a></figure>
 
 
 
-<p><strong>Organisation der Familie</strong></p>
+<p><em>De Rostemid-dynastie</em></p>
 
 
 
-<figure class="wp-block-image size-large"><a class="glightbox" href="https://taguine14.netlify.app/_next/image?url=%2Fimages%2FSmala_of_Abd_El-Kader_16_May_1843.jpg&amp;w=3840&amp;q=75"><img decoding="async" src="https://taguine14.netlify.app/_next/image?url=%2Fimages%2FSmala_of_Abd_El-Kader_16_May_1843.jpg&amp;w=3840&amp;q=75" alt=""></a></figure>
+<p>Tot de 7e eeuw bleef de Centrale Maghreb, door&nbsp;<strong>Ibn Khaldoun</strong>&nbsp;Zenitia genoemd , onafhankelijk.<br>Na de islamisering van de centrale Maghreb werd dit gebied het grondgebied van de&nbsp;<strong>Zenata</strong>&nbsp;.<br>De regio kwam vervolgens onder het bewind van de&nbsp;<strong>Rostemiden</strong>&nbsp;(707-909).<br>Tussen de 7e en 9e eeuw breidde de Arabische verovering, gesteund door de&nbsp;<strong>Kharedjiten</strong>&nbsp;van&nbsp;<strong>Tahert</strong>&nbsp;, de soevereiniteit van de&nbsp;<strong>Rostemides</strong>&nbsp;uit over alle hoogvlakten.<br>Halverwege de 11e eeuw vond de invasie plaats van de&nbsp;<strong>Hillalische bedoe&iuml;enen, die door de&nbsp;</strong><strong>Fatimiden</strong>&nbsp;uit Egypte waren verdreven.&nbsp;Deze invasie had ernstige gevolgen voor de stabiliteit van de Berberse koninkrijken en maakte een einde aan de&nbsp;<strong>Hamaditische</strong>&nbsp;dynastie .<br>Dankzij de invasie van de&nbsp;<strong>Beni Hillall</strong>&nbsp;verdreven de nomadische&nbsp;<strong>Zenete-</strong>&nbsp;stammen de&nbsp;sedentaire&nbsp;<strong>Sanhadja .</strong></p>
 
 
 
-<p class="has-text-align-center"><em>Die Smala von Emir Abdelkader</em></p>
+<h4 class="wp-block-heading"><strong>Ottomaanse periode</strong></h4>
 
 
 
-<p>Emir Abd el-Kader organisierte die Smala immer nach dem gleichen Prinzip: Sie bestand aus vier kreisf&ouml;rmigen und konzentrischen Bereichen, in denen jeder Douar, jede Familie und jedes Individuum seinen festen und markierten Platz hatte, entsprechend seinem Rang, seiner N&uuml;tzlichkeit, seinen Funktionen oder dem Vertrauen, das es einfl&ouml;&szlig;te. Als die Smala in ihrer Unterkunft ankam, stand das Zelt des Emirs in der Mitte des Gel&auml;ndes, das das Lager bedecken sollte.</p>
+<p>&Agrave; l&rsquo;&eacute;poque ottomane, le&nbsp;<strong>Beylik</strong>&nbsp;du&nbsp;<strong>Titteri</strong>&nbsp;(1546-1834) dont la capitale est&nbsp;<strong>M&eacute;d&eacute;a</strong>&nbsp;&eacute;tend sa domination sur toute cette r&eacute;gion des hautes plaines.</p>
+
+
+
+<figure class="wp-block-image"><a href="https://taguine14.netlify.app/_next/image?url=%2Fimages%2F1000007656.png&amp;w=3840&amp;q=75"><img decoding="async" src="https://taguine14.netlify.app/_next/image?url=%2Fimages%2F1000007656.png&amp;w=3840&amp;q=75" alt=""></a></figure>
+
+
+
+<p><em>Les provinces de la R&eacute;gence d&rsquo;Alger</em></p>
+
+
+
+<p>Du 14&egrave;me au 19&egrave;me si&egrave;cle, ce fut la domination turque et la conqu&ecirc;te de M&eacute;d&eacute;a par&nbsp;<strong>Arroudj</strong>.<br>Le Beylik du&nbsp;<strong>Titteri&nbsp;</strong>(1546-1834) dont la capitale est M&eacute;d&eacute;a &eacute;tend sa domination sur toute cette r&eacute;gion des hautes plaines.<br>En 1517&nbsp;<strong>Baba Arroudj&nbsp;</strong>occupa&nbsp;<strong>M&eacute;d&eacute;a&nbsp;</strong>et y installa une garnison d&rsquo;infanterie turque et quelques cavaliers andalous &eacute;migr&eacute;s d&rsquo;Espagne.<br>Le 1er Bey d&eacute;sign&eacute; &agrave; la t&ecirc;te de ce Beylik fut&nbsp;<strong>Redjeb</strong>, Bey de 1547 &agrave; 1633.<br>Le nombre de Beys qui ont gouvern&eacute; le&nbsp;<strong>Titteri&nbsp;</strong>pendant 227 ans de 1548 &agrave; 1775 a &eacute;t&eacute; de 18.<br>Le&nbsp;<strong>Bey Sofra&nbsp;</strong>&agrave; la t&ecirc;te du Beylik depuis 1772 trouva la mort lors de l&rsquo;exp&eacute;dition qu&rsquo;il mena contre les Tribus des&nbsp;<strong>Ouleds Nail</strong>&nbsp;qui, pendant plusieurs ann&eacute;es, ne s&rsquo;acquittaient pas de leurs imp&ocirc;ts.<br>Les &eacute;checs successifs des troupes turques permirent l&rsquo;&eacute;tablissement &agrave;&nbsp;<strong>M&eacute;d&eacute;a&nbsp;</strong>du si&egrave;ge permanent du Beylik du&nbsp;<strong>Titteri&nbsp;</strong>pour mieux affirmer l&rsquo;autorit&eacute; chancelante des pachas<br>Le choix du divan porta sur&nbsp;<strong>Mustapha El Ouaznadji Ben Souleimain</strong>&nbsp;qui fut nomm&eacute; Bey du&nbsp;<strong>Titteri&nbsp;</strong>qu&rsquo;il administra pendant dix neuf ans de 1775 &agrave; 1794.<br><strong>Mohamed Frira</strong>, surnomm&eacute; l&rsquo;&eacute;gorgeur, administra le&nbsp;<strong>Titteri&nbsp;</strong>de 1794 &agrave; 1799 et fut tu&eacute; lors d&rsquo;une exp&eacute;dition<br>Son successeur&nbsp;<strong>Ibrahim Tlem&ccedil;ani&nbsp;</strong>conserva le pouvoir jusqu&rsquo;en 1801.<br>Le&nbsp;<strong>Bey Hassan&nbsp;</strong>occupa le gouvernorat du&nbsp;<strong>Titteri&nbsp;</strong>et fut plusieurs sorties contre les&nbsp;<strong>Ouled Nail</strong>.<br>Il fit construire &agrave;&nbsp;<strong>M&eacute;d&eacute;a&nbsp;</strong>la mosqu&eacute;e appel&eacute;e&nbsp;<strong>Djamaa El Ahmer</strong>&nbsp;pr&egrave;s de la porte des jardins.<br><strong>Mohamed Bey</strong>&nbsp;lui succ&eacute;da jusqu&rsquo;en 1809 et fut &agrave; son tour &eacute;trangl&eacute; par ordre du nouveau&nbsp;<strong>Pacha</strong>.<br><strong>Hadj Ali Boumezrag</strong>&nbsp;cl&ocirc;t la liste des Beys du&nbsp;<strong>Titteri&nbsp;</strong>qu&rsquo;il administra de 1819 &agrave; 1830<br>Il mourut quelques ann&eacute;es plus tard &agrave;&nbsp;<strong>Alexandrie&nbsp;</strong>en&nbsp;<strong>Egypte&nbsp;</strong>o&ugrave; il vivait son exil.</p>
+
+
+
+<p><strong>Les d&eacute;buts de la conqu&ecirc;te coloniale</strong><br>De 1830 &agrave; 1847, ce fut la conqu&ecirc;te fran&ccedil;aise du&nbsp;<strong>Titteri&nbsp;</strong>dont les colonnes rencontr&egrave;rent une vive r&eacute;sistance conduite par l&rsquo;<strong>&Eacute;mir Abdelkader</strong>.<br><strong>M&eacute;d&eacute;a</strong>&nbsp;ne tomba qu&lsquo;en 1837 alors que la lutte continuait dans le sud et les&nbsp;<strong>Ouled Nail</strong>.<br>La&nbsp;<strong>Smala&nbsp;</strong>a &eacute;t&eacute; prise par surprise en l&rsquo;absence de&nbsp;<strong>l&rsquo;&Eacute;mir</strong>.<br>Tout au long de la p&eacute;riode fran&ccedil;aise&nbsp;<strong>Taguine&nbsp;</strong>est rest&eacute; une zone d&rsquo;attente importante pour la transhumance et un centre modeste o&ugrave; r&eacute;sidait un&nbsp;<strong>Ca&iuml;d</strong>&nbsp;d&eacute;pendant de la commune mixte de&nbsp;<strong>Chellala</strong>.<br><strong>Ce ne fut jamais un centre de peuplement europ&eacute;en</strong>.</p>
+
+
+
+<h4 class="wp-block-heading"><strong>Origine et &eacute;volution du nom</strong></h4>
+
+
+
+<p>La commune de&nbsp;<strong>Z&rsquo;malet El &Eacute;mir Abdelkader</strong>, situ&eacute;e dans la&nbsp;<strong>wilaya de Tiaret</strong>, &eacute;tait autrefois connue sous le nom de&nbsp;<strong>Taguine</strong>. Elle a &eacute;t&eacute; rebaptis&eacute;e en hommage &agrave;&nbsp;<strong>l&rsquo;&Eacute;mir Abdelkader</strong>, figure embl&eacute;matique de la r&eacute;sistance alg&eacute;rienne contre la colonisation fran&ccedil;aise au XIX&#7497; si&egrave;cle.</p>
+
+
+
+<p>Le mot&nbsp;<strong>&ldquo;Z&rsquo;malet&rdquo;</strong>&nbsp;fait r&eacute;f&eacute;rence aux&nbsp;<strong>zmalas</strong>, qui &eacute;taient des camps itin&eacute;rants regroupant les familles, les combattants et les biens de l&rsquo;&Eacute;mir Abdelkader durant sa lutte contre l&rsquo;arm&eacute;e fran&ccedil;aise.</p>
+
+
+
+<h4 class="wp-block-heading"><strong>Organisation de la smala</strong></h4>
+
+
+
+<figure class="wp-block-image"><a href="https://taguine14.netlify.app/_next/image?url=%2Fimages%2FSmala_of_Abd_El-Kader_16_May_1843.jpg&amp;w=3840&amp;q=75"><img decoding="async" src="https://taguine14.netlify.app/_next/image?url=%2Fimages%2FSmala_of_Abd_El-Kader_16_May_1843.jpg&amp;w=3840&amp;q=75" alt=""></a></figure>
+
+
+
+<p><em>La Smala de L&rsquo;&Eacute;mir Abdelkader</em></p>
 
 
 
 <ul class="wp-block-list">
-<li>Es war unmittelbar umgeben von den Zelten der engsten Bediensteten und der wichtigsten Verwandten von Abd el-Kader, die die erste Einfriedung bildeten: 5 Douar<br></li>
+<li><strong>L&rsquo;&Eacute;mir Abd el-Kader</strong>&nbsp;organisait la smala toujours selon le m&ecirc;me principe : elle se composait de quatre enceintes circulaires et concentriques o&ugrave; chaque douar, chaque famille, chaque individu avait sa place fixe et marqu&eacute;e, suivant son rang, son utilit&eacute;, ses fonctions, ou la confiance qu&rsquo;il inspirait. La smala arrivant &agrave; son g&icirc;te, la tente de l&rsquo;&eacute;mir se dressait au centre du terrain que le camp devait couvrir.</li>
 
 
 
-<li>Die zweite Gruppe umfasste die Douars von Khalifa Ben Allal und seinen Verwandten, die der regul&auml;ren Infanterie und einiger wichtiger H&auml;uptlinge: 10 Douars.<br></li>
+<li>Elle &eacute;tait imm&eacute;diatement entour&eacute;e des tentes des serviteurs intimes et des principaux parents d&rsquo;<strong>Abd el-Kader</strong>&nbsp;qui composaient la premi&egrave;re enceinte :&nbsp;<strong>5 douars</strong></li>
 
 
 
-<li>Die dritte Gruppe bestand aus den Hachem-Cherraga und den Hachem-Gharaba: 207 Douar.<br></li>
+<li>La seconde comprenait les douars du&nbsp;<strong>Khalifa Ben Allal</strong>&nbsp;et de ses parents, ceux de l&rsquo;infanterie r&eacute;guli&egrave;re et de quelques chefs importants :&nbsp;<strong>10 douars</strong>.</li>
 
 
 
-<li>Das vierte Gehege, das je nach den Schwierigkeiten des Gel&auml;ndes, des Wassers, der W&auml;lder oder der Weiden mehr oder weniger nahe an den Hauptgehegen lag, wurde von sieben Nomadenst&auml;mmen gebildet, die den Smala in der W&uuml;ste als F&uuml;hrer und Schutz dienten: 146 Douars.<br></li>
+<li>La troisi&egrave;me &eacute;tait form&eacute;e par les&nbsp;<strong>Hachem-Cherraga</strong>&nbsp;et par les&nbsp;<strong>Hachem-Gharaba</strong>&nbsp;:&nbsp;<strong>207 douars</strong>.</li>
 
 
 
-<li>Insgesamt 368 Douars mit jeweils f&uuml;nfzehn bis zwanzig Zelten. Die Bev&ouml;lkerung dieser Wanderstadt kann auf zwanzigtausend Seelen gesch&auml;tzt werden, und die Zahl der mit Gewehren bewaffneten K&auml;mpfer auf f&uuml;nftausend, darunter f&uuml;nfhundert regul&auml;re Infanteristen und zweitausend Kavalleristen.<br></li>
+<li>La quatri&egrave;me enceinte, plus ou moins rapproch&eacute;e des enceintes principales, suivant les difficult&eacute;s du terrain, l&rsquo;eau, les bois ou les p&acirc;turages, &eacute;tait form&eacute;e par sept tribus nomades qui servaient &agrave; la smala de guides et de protection dans le d&eacute;sert :&nbsp;<strong>146 douars</strong>.</li>
+
+
+
+<li>In totaal&nbsp;&nbsp;<strong>368 douars</strong>&nbsp;, elk met vijftien tot twintig tenten. De bevolking van deze rondtrekkende stad kan worden geschat op twintigduizend zielen en&nbsp;&nbsp;&nbsp;het aantal met geweren bewapende strijders&nbsp; op&nbsp;<strong>vijfduizend , waaronder&nbsp;</strong><strong>vijfhonderd</strong>&nbsp;&nbsp;reguliere infanteristen en&nbsp;&nbsp;<strong>tweeduizend cavaleristen</strong>&nbsp;.</li>
 </ul>
 
 
 
-<figure class="wp-block-image size-large"><a class="glightbox" href="https://res.cloudinary.com/dgjtact77/images/f_auto,q_auto/v1742738307/Plan_de_la_smala_dAbdelkader_1843/Plan_de_la_smala_dAbdelkader_1843.jpg?_i=AA"><img width="1024" height="1012" fetchpriority="high" decoding="async" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDI0IiBoZWlnaHQ9IjEwMTIiPjxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiPjxhbmltYXRlIGF0dHJpYnV0ZU5hbWU9ImZpbGwiIHZhbHVlcz0icmdiYSgxNTMsMTUzLDE1MywwLjUpO3JnYmEoMTUzLDE1MywxNTMsMC4xKTtyZ2JhKDE1MywxNTMsMTUzLDAuNSkiIGR1cj0iMnMiIHJlcGVhdENvdW50PSJpbmRlZmluaXRlIiAvPjwvcmVjdD48L3N2Zz4=" alt="" class="wp-post-227 wp-image-776" data-public-id="Plan_de_la_smala_dAbdelkader_1843/Plan_de_la_smala_dAbdelkader_1843.jpg" data-format="jpg" data-transformations="f_auto,q_auto" data-version="1742738307" data-seo="1" data-responsive="1" data-size="1024 1012" data-delivery="upload" onload=";window.CLDBind?CLDBind(this):null;" data-cloudinary="lazy"></a><figcaption class="wp-element-caption">Plan_de_la_smala_d&rsquo;Abdelkader_1843</figcaption></figure>
+<figure class="wp-block-image"><a class="glightbox" href="https://res.cloudinary.com/dgjtact77/images/f_auto,q_auto/v1742738313/Plan_de_la_smala_dAbdelkader_1843_756ae41d/Plan_de_la_smala_dAbdelkader_1843_756ae41d.jpg?_i=AA"><img width="1500" height="1483" fetchpriority="high" decoding="async" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNTAwIiBoZWlnaHQ9IjE0ODMiPjxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiPjxhbmltYXRlIGF0dHJpYnV0ZU5hbWU9ImZpbGwiIHZhbHVlcz0icmdiYSgxNTMsMTUzLDE1MywwLjUpO3JnYmEoMTUzLDE1MywxNTMsMC4xKTtyZ2JhKDE1MywxNTMsMTUzLDAuNSkiIGR1cj0iMnMiIHJlcGVhdENvdW50PSJpbmRlZmluaXRlIiAvPjwvcmVjdD48L3N2Zz4=" alt="" class="wp-post-227 wp-image-756" data-public-id="Plan_de_la_smala_dAbdelkader_1843_756ae41d/Plan_de_la_smala_dAbdelkader_1843_756ae41d.jpg" data-format="jpg" data-transformations="f_auto,q_auto" data-version="1742738313" data-seo="1" data-responsive="1" data-size="1500 1483" data-delivery="upload" onload=";window.CLDBind?CLDBind(this):null;" data-cloudinary="lazy"></a></figure>
 
 
 
-<p><strong>Die Einnahme von Abdelkaders Smala (1843): ein bedeutendes Ereignis</strong><br>Das bedeutendste Ereignis in der Geschichte der Region war die Einnahme der Smala von Abdelkader durch franz&ouml;sische Streitkr&auml;fte am 16. Mai 1843.</p>
+<h3 class="wp-block-heading"><strong>De inname van Abdelkaders Smala (1843): een belangrijke gebeurtenis</strong></h3>
 
 
 
-<p><strong>Historischer Kontext</strong><br>Seit 1832 f&uuml;hrte Emir Abdelkader einen Widerstandskrieg gegen die franz&ouml;sische Besatzung.<br>Um feindlichen Angriffen zu entgehen, hatte er eine Smala organisiert, eine riesige Nomadengemeinschaft mit mehreren tausend Menschen:<br>Seine K&auml;mpfer und ihre Familien.<br>Handwerker, Gelehrte und religi&ouml;se Menschen.<br>Viehbestand, Reichtum und milit&auml;rische Ressourcen<br>Im Mai 1843 wurde die Smala in der Region Taguine (heute Z&rsquo;malet El &Eacute;mir Abdelkader) installiert.<br>Der Angriff des Herzogs von Aumale<br>Die Smala hatte das Ende des Winters 1843 zwei Tagesm&auml;rsche s&uuml;dlich von Tagdempt verbracht. Als man ihr mitteilte, dass sie verfolgt wurde, irrte sie eine Zeit lang umher und fand sich am 16. Mai an der Taguine-Quelle wieder. Generalgouverneur Bugeaud war &uuml;ber die Anwesenheit der Smala in der N&auml;he von Boghari (dem heutigen Ksar El Boukhari, Wilaya von M&eacute;d&eacute;a) informiert worden, der Standort war jedoch unbekannt.<br>Er befahl General Lamorici&egrave;re und dem Herzog von Aumale, ihn zu verfolgen. Der Prinz brach mit 1.300 Infanteristen und 600 Pferden von Boghari auf. Drei Tage sp&auml;ter erfuhr er, dass die Smala 80 Kilometer s&uuml;dlich von Goudjila (dem heutigen Nadorah, Wilaya von Tiaret) lag. Um sie zu erreichen, musste er zwanzig Meilen am St&uuml;ck zur&uuml;cklegen, ohne einen Tropfen Wasser zu trinken. W&auml;hrend die Soldaten nach der Taguine-Quelle suchten, um ihren Durst zu stillen, kam der Bachagha Ahmar ben Ferhat (Bachagha des Ouled Ayad, Theniet El Had), um den Prinzen &uuml;ber die unerwartete Anwesenheit der Smala an dieser Quelle zu informieren.</p>
+<p>De belangrijkste gebeurtenis in de geschiedenis van de regio is&nbsp;&nbsp;<strong>de inname van de Smala van Abdelkader</strong>&nbsp;&nbsp;door Franse troepen op&nbsp;&nbsp;<strong>16 mei 1843</strong>&nbsp;.</p>
 
 
-<div class="wp-block-image">
-<figure class="aligncenter size-large"><a class="glightbox" href="https://taguine14.netlify.app/_next/image?url=%2Fimages%2FSmala%2520Emir%2520Abdelkader%2520-%2520Horace%2520Vernet.jpg&amp;w=3840&amp;q=75"><img decoding="async" src="https://taguine14.netlify.app/_next/image?url=%2Fimages%2FSmala%2520Emir%2520Abdelkader%2520-%2520Horace%2520Vernet.jpg&amp;w=3840&amp;q=75" alt=""></a></figure></div>
+
+<h4 class="wp-block-heading"><strong>Historische context</strong></h4>
 
 
-<p class="has-text-align-center"><em>Gefangennahme der Smala&ldquo;, 1844 von Horace Vernet gemalt und im Museum f&uuml;r franz&ouml;sische Geschichte in Versailles ausgestellt.</em></p>
+
+<ul class="wp-block-list">
+<li>Sinds&nbsp;&nbsp;<strong>1832</strong>&nbsp;voerde emir Abdelkader een&nbsp;&nbsp;<strong>verzetsoorlog</strong>&nbsp;&nbsp;tegen de Franse bezetting.</li>
 
 
-<div class="wp-block-image">
-<figure class="aligncenter size-large"><a class="glightbox" href="https://taguine14.netlify.app/_next/image?url=%2Fimages%2Fpict0058.jpg&amp;w=3840&amp;q=75"><img decoding="async" src="https://taguine14.netlify.app/_next/image?url=%2Fimages%2Fpict0058.jpg&amp;w=3840&amp;q=75" alt=""></a></figure></div>
+
+<li>Om aan vijandelijke aanvallen te ontkomen, had hij een&nbsp;&nbsp;<strong>smala</strong>&nbsp;georganiseerd , een immense nomadische gemeenschap van enkele duizenden mensen:
+<ul class="wp-block-list">
+<li>De strijders en hun families.</li>
 
 
-<p class="has-text-align-center"><em>Denkmal zu Ehren von Emir Abdelkader, errichtet auf den H&ouml;hen von Z&rsquo;Malet El &Eacute;mir Abdelkader</em></p>
+
+<li>Ambachtslieden, geleerden en religieuze mensen.</li>
+
+
+
+<li>Vee, rijkdom en militaire middelen</li>
+
+
+
+<li>In mei 1843 werd de Smala opgericht in de regio&nbsp;&nbsp;<strong>Taguine</strong>&nbsp;&nbsp;(het huidige&nbsp;&nbsp;<strong>Z&rsquo;malet El &Eacute;mir Abdelkader</strong>&nbsp;).</li>
+</ul>
+</li>
+</ul>
+
+
+
+<h4 class="wp-block-heading"><strong>De aanval op de hertog van Aumale</strong></h4>
+
+
+
+<ul class="wp-block-list">
+<li>De smala bracht het einde van de winter van 1843 door op twee dagen mars ten zuiden van&nbsp;&nbsp;<strong>Tagdempt</strong>&nbsp;. Toen ze hoorde dat ze werd achtervolgd, zwierf ze een tijdje rond en op 16 mei kwam ze bij de&nbsp; bron&nbsp;<strong>van Taguine</strong>&nbsp;terecht . Gouverneur-generaal&nbsp;&nbsp;<strong>Bugeaud</strong>&nbsp;&nbsp;was op de hoogte gesteld van de aanwezigheid van de smala in de buurt van&nbsp;&nbsp;<strong>Boghari</strong>&nbsp;&nbsp;(tegenwoordig&nbsp;&nbsp;<strong>Ksar El Boukhari</strong>&nbsp;, Wilaya van&nbsp;&nbsp;<strong>M&eacute;d&eacute;a</strong>&nbsp;), maar de locatie was onbekend.</li>
+
+
+
+<li>Hij gaf generaal&nbsp;&nbsp;<strong>Lamorici&egrave;re</strong>&nbsp;en de hertog&nbsp;&nbsp;<strong>van Aumale</strong>&nbsp;opdracht &nbsp;hem te achtervolgen. De prins vertrok vanuit&nbsp;&nbsp;<strong>Boghari</strong>&nbsp;&nbsp;met 1.300 man infanterie en 600 paarden. Drie dagen later hoorde hij dat de smala 80 kilometer ten zuiden van&nbsp;&nbsp;<strong>Goudjila</strong>&nbsp;lag (het huidige&nbsp;&nbsp;<strong>Nadorah</strong>&nbsp;, Wilaya van&nbsp;&nbsp;<strong>Tiaret</strong>&nbsp;). Om het te bereiken, moest men in &eacute;&eacute;n keer twintig mijl afleggen, zonder ook maar &eacute;&eacute;n druppel water te verliezen. Terwijl de soldaten op zoek waren naar de&nbsp;&nbsp;<strong>Taguine</strong>&nbsp;-bron &nbsp;om hun dorst te lessen, kwam de bachagha&nbsp;&nbsp;<strong>Ahmar ben Ferhat</strong>&nbsp;&nbsp;(de bachagha van de&nbsp;&nbsp;<strong>ouled Ayad</strong>&nbsp;,&nbsp;&nbsp;<strong>Theniet El Had</strong>&nbsp;) de prins informeren over de onverwachte aanwezigheid van de smala bij diezelfde bron.</li>
+
+
+
+<li>Tijdens de aanval werden 300 metgezellen van&nbsp;<strong>de emir</strong>&nbsp;gedood en velen werden gevangen genomen, terwijl hij er zelf maar 3.000 had. De rest liet hij vrij.</li>
+
+
+
+<li>Onder de gevangenen bevonden zich de hele familie van&nbsp;<strong>Mohamed Ben Allal Ben Embarek</strong>&nbsp;, en die van&nbsp;<strong>El Kharoubi</strong>&nbsp;, de eerste secretaris van&nbsp;<strong>de emir</strong>&nbsp;, en van verschillende andere invloedrijke leiders.</li>
+
+
+
+<li>Op de 17e&nbsp;verbleef de&nbsp;<strong>hertog van Aumale in&nbsp;</strong><strong>Taguine</strong>&nbsp;om de colonne wat rust te gunnen.</li>
+
+
+
+<li>De tenten en de buit die niet vervoerd konden worden, werden verbrand.</li>
+
+
+
+<li>De prins trok zich vervolgens terug naar&nbsp;<strong>Boghari</strong>&nbsp;en vandaar naar&nbsp;<strong>M&eacute;d&eacute;a</strong>&nbsp;, vanwaar zijn buit naar&nbsp;<strong>Algiers</strong>&nbsp;werd gebracht .</li>
+</ul>
+
+
+
+<figure class="wp-block-image"><a href="https://taguine14.netlify.app/_next/image?url=%2Fimages%2FSmala%2520Emir%2520Abdelkader%2520-%2520Horace%2520Vernet.jpg&amp;w=3840&amp;q=75"><img decoding="async" src="https://taguine14.netlify.app/_next/image?url=%2Fimages%2FSmala%2520Emir%2520Abdelkader%2520-%2520Horace%2520Vernet.jpg&amp;w=3840&amp;q=75" alt=""></a></figure>
+
+
+
+<p><em>De verovering van de Smala, geschilderd door Horace Vernet in 1844 en tentoongesteld in het Museum voor Franse Geschiedenis in Versailles.</em></p>
+
+
+
+<div class="wp-block-group is-layout-grid wp-container-core-group-is-layout-1 wp-block-group-is-layout-grid">
+<figure class="wp-block-image size-full"><a class="glightbox" href="https://res.cloudinary.com/dgjtact77/images/f_auto,q_auto/v1742213544/pict0058/pict0058.jpg?_i=AA"><img width="800" height="600" decoding="async" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI4MDAiIGhlaWdodD0iNjAwIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIj48YW5pbWF0ZSBhdHRyaWJ1dGVOYW1lPSJmaWxsIiB2YWx1ZXM9InJnYmEoMTUzLDE1MywxNTMsMC41KTtyZ2JhKDE1MywxNTMsMTUzLDAuMSk7cmdiYSgxNTMsMTUzLDE1MywwLjUpIiBkdXI9IjJzIiByZXBlYXRDb3VudD0iaW5kZWZpbml0ZSIgLz48L3JlY3Q+PC9zdmc+" alt="" class="wp-post-227 wp-image-266" style="aspect-ratio:1;object-fit:cover" data-public-id="pict0058/pict0058.jpg" data-format="jpg" data-transformations="f_auto,q_auto" data-version="1742213544" data-seo="1" data-responsive="1" data-size="800 600" data-delivery="upload" onload=";window.CLDBind?CLDBind(this):null;" data-cloudinary="lazy"></a></figure>
+
+
+
+<figure class="wp-block-image size-large"><a class="glightbox" href="https://res.cloudinary.com/dgjtact77/images/f_auto,q_auto/v1743864070/Monument_2/Monument_2.jpg?_i=AA"><img width="966" height="1235" decoding="async" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI5NjYiIGhlaWdodD0iMTIzNSI+PHJlY3Qgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSI+PGFuaW1hdGUgYXR0cmlidXRlTmFtZT0iZmlsbCIgdmFsdWVzPSJyZ2JhKDE1MywxNTMsMTUzLDAuNSk7cmdiYSgxNTMsMTUzLDE1MywwLjEpO3JnYmEoMTUzLDE1MywxNTMsMC41KSIgZHVyPSIycyIgcmVwZWF0Q291bnQ9ImluZGVmaW5pdGUiIC8+PC9yZWN0Pjwvc3ZnPg==" alt="" class="wp-post-227 wp-image-862 wp-image-1080" style="aspect-ratio:1;object-fit:cover" data-public-id="Monument_2/Monument_2.jpg" data-format="jpg" data-transformations="f_auto,q_auto" data-version="1743864070" data-seo="1" data-responsive="1" data-size="966 1235" data-delivery="upload" onload=";window.CLDBind?CLDBind(this):null;" data-cloudinary="lazy"></a></figure>
+</div>
+
+
+
+<p class="has-text-align-center"><em>Monument ter ere van Emir Abdelkader opgericht op de hoogten van Z&rsquo;Malet El Emir Abdelkader</em></p>
 <div class="simplesocialbuttons simplesocial-round-icon simplesocialbuttons_inline simplesocialbuttons-align-left post-227 post  simplesocialbuttons-inline-right-in">
 <button class="simplesocial-fb-share" rel="nofollow" target="_blank" aria-label="Facebook Share" data-href="https://www.facebook.com/sharer/sharer.php?u=/de/geschiedenis/" onclick="javascript:window.open(this.dataset.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;"><span class="simplesocialtxt">Facebook </span> </button>
 <button class="simplesocial-msng-share" rel="nofollow" target="_blank" aria-label="Facebook Messenger Share" onclick="javascript:window.open( this.dataset.href, '_blank',  'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600' );return false;" data-href="http://www.facebook.com/dialog/send?app_id=891268654262273&amp;redirect_uri=%2Fde%2Fgeschiedenis%2F&amp;link=%2Fde%2Fgeschiedenis%2F&amp;display=popup"><span class="simplesocialtxt">Messenger</span></button> 
@@ -417,10 +514,13 @@ var CLDLB = {"image_delivery":"on","image_optimization":"on","image_format":"aut
 <div id="smobile-menu" class="mobile-only"></div>
 <div id="mobile-menu-overlay"></div>
 
+<style id="core-block-supports-inline-css" type="text/css">
+.wp-container-core-group-is-layout-1{grid-template-columns:repeat(auto-fill, minmax(min(20rem, 100%), 1fr));container-type:inline-size;}
+</style>
 <script type="text/javascript" src="/wp-content/plugins/simple-social-buttons/assets/js/frontend-blocks.js?ver=6.0.0" id="ssb-blocks-front-js-js"></script>
 <script type="text/javascript" id="ssb-front-js-js-extra">
 /* <![CDATA[ */
-var SSB = {"ajax_url":"\/wp-admin\/admin-ajax.php","fb_share_nonce":"1afb778ed6"};
+var SSB = {"ajax_url":"\/wp-admin\/admin-ajax.php","fb_share_nonce":"61cb219c6c"};
 /* ]]> */
 </script>
 <script type="text/javascript" src="/wp-content/plugins/simple-social-buttons/assets/js/front.js?ver=6.0.0" id="ssb-front-js-js"></script>
