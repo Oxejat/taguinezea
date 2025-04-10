@@ -2801,7 +2801,7 @@ body.hidden {
 #fullscreen-bg-video {
     width: 100%;
     height: 100%;
-    object-fit: contain;
+    object-fit: scale-down;
 }
 
 /* Black transparent overlay over the video */
