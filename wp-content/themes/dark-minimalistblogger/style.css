@@ -2781,3 +2781,36 @@ body .main-navigation .ul.sub-menu {
 .featured-sidebar .search-field, .header-widget .search-field {
     color: #fff !important;
 }
+/* Keeps website content hidden initially */
+body.hidden {
+    overflow: hidden;
+}
+
+/* Fullscreen video background */
+.fullscreen-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    z-index: 9999;
+    overflow: hidden;
+}
+
+/* The video */
+#fullscreen-bg-video {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+/* Black transparent overlay over the video */
+.video-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.6); /* Change opacity if needed */
+    z-index: 10000;
+}
